@@ -37,7 +37,7 @@ export default function Testimonials() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs sm:text-sm font-bold text-lime-600 uppercase tracking-widest block">
+          <span className="text-xs sm:text-sm font-bold text-rose-600 uppercase tracking-widest block">
             Patient Stories
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
@@ -56,7 +56,7 @@ export default function Testimonials() {
               className="bg-slate-50 border border-slate-100 rounded-2xl p-6 md:p-8 flex flex-col justify-between relative shadow-sm hover:shadow-md transition-shadow"
             >
               {/* Decorative Quote Mark */}
-              <span className="absolute top-6 right-8 text-lime-200 text-6xl font-serif select-none leading-none pointer-events-none">
+              <span className="absolute top-6 right-8 text-rose-200 text-6xl font-serif select-none leading-none pointer-events-none">
                 “
               </span>
 
@@ -92,7 +92,7 @@ export default function Testimonials() {
                 </div>
                 
                 {/* Treatment Category Tag */}
-                <span className="text-[10px] sm:text-xs bg-lime-50 text-lime-700 font-semibold px-2.5 py-1 rounded-md">
+                <span className="text-[10px] sm:text-xs bg-rose-50 text-rose-700 font-semibold px-2.5 py-1 rounded-md">
                   {review.treatment}
                 </span>
               </div>
