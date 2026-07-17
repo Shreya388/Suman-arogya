@@ -132,7 +132,7 @@ useEffect(() => {
       </div>
 
       {/* 2. Main Navigation Bar */}
-      <nav className={`left-0 right-0 z-50 bg-white border-b border-gray-100 backdrop-blur-md bg-opacity-95 shadow-sm transition-all ${
+      <nav className={`left-0 right-0 z-50 bg-white border-b border-gray-100 backdrop-blur-md bg-opacity-95 transition-all ${
   isSticky ? "fixed top-0 w-full shadow-md animate-in fade-in duration-200" : "relative"
 }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

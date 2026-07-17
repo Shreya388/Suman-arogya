@@ -20,7 +20,7 @@ export default function Hero() {
 
             {/* Main Heading */}
             <h1 className="text-5xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-              Your Health, Our <span className="text-rose-500">Priorities</span>. Trusted Consultation.
+              <p className="font-thin">Your Health, Our <span className="text-rose-500">Priorities</span>.</p> Trusted Consultation.
             </h1>
 
             {/* Subheading */}
