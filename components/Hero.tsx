@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-fuchsia-50 via-white to-slate-50 overflow-hidden py-16 md:py-24 lg:py-32">
+    <section className="relative bg-gradient-to-br from-fuchsia-50 via-white to-slate-50 overflow-hidden py-16 md:py-24 lg:py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -68,7 +68,7 @@ export default function Hero() {
           {/* Right Column: Aesthetic Graphic/Placeholder Asset Layout */}
           <div className="lg:col-span-5 relative flex justify-center">
             <img
-        src="https://images.pexels.com/photos/6129111/pexels-photo-6129111.jpeg"
+        src="https://images.pexels.com/photos/7789602/pexels-photo-7789602.jpeg"
         alt="Medical facility consultation area"
         className="w-full h-auto rounded-2xl shadow-md object-cover max-h-[500px]"
       />

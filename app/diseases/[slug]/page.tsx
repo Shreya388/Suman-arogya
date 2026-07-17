@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Footer from "@/components/Footer";
 
 interface DiseaseDetail {
   title: string;
@@ -270,6 +271,7 @@ export default async function DiseasePage({ params }: PageProps) {
   };
 
   return (
+    <>
     <main className="min-h-screen bg-slate-50/50 pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
@@ -343,6 +345,9 @@ export default async function DiseasePage({ params }: PageProps) {
         </div>
 
       </div>
+      
     </main>
+    <Footer />
+    </>
   );
 }

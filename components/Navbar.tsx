@@ -8,6 +8,7 @@ interface NavLink {
   href: string;
 }
 
+
 const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
@@ -78,6 +79,23 @@ export default function ClinicHeader() {
   const [isMobileAccordionOpen, setIsMobileAccordionOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+
+const [isSticky, setIsSticky] = useState<boolean>(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    // If scrolled past the top bar (approx 40px), make it sticky
+    if (window.scrollY > 40) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -89,9 +107,9 @@ export default function ClinicHeader() {
   }, []);
 
   return (
-    <header className="w-full fixed top-0 z-50">
+    <header className="w-full relative z-50">
       {/* 1. Top Informational Bar */}
-      <div className="bg-fuchsia-50 text-gray-800 text-xs sm:text-sm py-2 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <div className="bg-fuchsia-50 text-gray-500 text-xs sm:text-sm py-2 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <span className="flex items-center">
             <svg className="w-4 h-4 mr-1.5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -114,7 +132,9 @@ export default function ClinicHeader() {
       </div>
 
       {/* 2. Main Navigation Bar */}
-      <nav className="bg-white border-b border-gray-100 backdrop-blur-md bg-opacity-95">
+      <nav className={`left-0 right-0 z-50 bg-white border-b border-gray-100 backdrop-blur-md bg-opacity-95 shadow-sm transition-all ${
+  isSticky ? "fixed top-0 w-full shadow-md animate-in fade-in duration-200" : "relative"
+}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             
@@ -307,6 +327,8 @@ export default function ClinicHeader() {
           </div>
         )}
       </nav>
+      {/* Add this spacer line */}
+  {isSticky && <div className="h-20 w-full" />}
     </header>
   );
 }

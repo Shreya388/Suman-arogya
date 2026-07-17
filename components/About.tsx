@@ -1,4 +1,6 @@
+// components/About.tsx
 import Link from "next/link";
+import Image from "next/image";
 
 interface CoreValue {
   title: string;
@@ -11,7 +13,7 @@ const coreValues: CoreValue[] = [
     title: "Patient-Centric Care",
     description: "Your health, comfort, and safety come first. We customize every consultation process to your precise health history.",
     icon: (
-      <svg className="w-6 h-6 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-5 h-5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
       </svg>
     ),
@@ -20,7 +22,7 @@ const coreValues: CoreValue[] = [
     title: "Expert Consultations",
     description: "Gain direct access to board-certified medical specialists with decades of combined clinical treatment experience.",
     icon: (
-      <svg className="w-6 h-6 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-5 h-5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
@@ -29,7 +31,7 @@ const coreValues: CoreValue[] = [
     title: "Advanced Diagnostics",
     description: "We utilize modern medical screening technologies to ensure early, accurate detection and reliable treatment roadmaps.",
     icon: (
-      <svg className="w-6 h-6 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-5 h-5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
       </svg>
     ),
@@ -38,60 +40,77 @@ const coreValues: CoreValue[] = [
 
 export default function About() {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-20 md:py-28 bg-slate-50/50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top Layout Grid: Split description and visual content */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+        {/* Top Layout Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center mb-24">
           
-          {/* Left Column: Visual Structure Accent */}
-          <div className="lg:col-span-5 order-last lg:order-first">
-            <div className="relative">
-              {/* Aesthetic background frame */}
-              <div className="absolute -top-4 -left-4 w-72 h-72 bg-rose-50 rounded-2xl -z-10"></div>
-              <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-slate-100 rounded-2xl -z-10"></div>
+          {/* Left Column: Premium Interactive Graphic Stack */}
+          <div className="lg:col-span-5 order-last lg:order-first relative">
+            <div className="relative mx-auto max-w-[400px] lg:max-w-none aspect-[4/5] sm:w-[90%]">
+              {/* Geometric Decorative Underlays */}
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-fuchsia-100 rounded-3xl -z-10 opacity-60 dynamic-pulse"></div>
+              <div className="absolute -bottom-10 -right-6 w-48 h-48 bg-rose-50 rounded-full -z-10 opacity-80 blur-2xl"></div>
               
-              {/* Main Graphical Frame Box */}
-              <div className="w-full aspect-[4/5] bg-slate-50 border border-slate-200 rounded-2xl shadow-md p-8 flex flex-col justify-between">
-                <div>
-                  <span className="text-sm font-bold text-rose-600 tracking-wider uppercase">Our Mission</span>
-                  <h3 className="text-2xl font-bold text-slate-900 mt-2">Empowering Healthy Living</h3>
-                  <p className="text-slate-600 mt-4 leading-relaxed text-sm">
-                    To deliver accessible, high-quality medical consultation solutions that foster long-term health, preventive care wellness, and strong patient-doctor partnerships.
+              {/* Premium Asymmetric Border Frame */}
+              <div className="absolute inset-0 border border-slate-200/80 rounded-3xl translate-x-4 translate-y-4 -z-10"></div>
+              
+              {/* Main Medical Image Canvas */}
+              <div className="w-full h-full relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-200 border border-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80"
+                  alt="Suman Arogya Medical Practice"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                  sizes="(max-w-7xl) 40vw, 500px"
+                />
+                
+                {/* Floating Glassmorphic Mission Plate */}
+                <div className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-white/40 shadow-xl">
+                  <span className="text-[10px] font-bold text-fuchsia-700 uppercase tracking-widest block mb-1">Our Mission</span>
+                  <p className="text-slate-800 text-xs font-semibold leading-relaxed">
+                    To deliver accessible, high-quality medical consultation solutions that foster long-term health and preventive wellness.
                   </p>
                 </div>
-                
-                {/* Embedded Mini Stat Card */}
-                <div className="bg-fuchsia-500 text-white p-4 rounded-xl shadow-sm mt-6">
-                  <p className="text-xs font-semibold uppercase tracking-wider opacity-80">Clinical Standard</p>
-                  <p className="text-lg font-bold mt-1">ISO 9001:2015 Certified Clinic</p>
-                </div>
+              </div>
+
+              {/* Minimalist Floating ISO Badge */}
+              <div className="absolute -top-4 right-4 bg-slate-900 text-white px-3.5 py-2 rounded-xl shadow-lg flex items-center space-x-2 border border-slate-800">
+                <div className="w-2 h-2 bg-emerald-400 rounded-full animate-ping"></div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-300">ISO 9001:2015</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Narrative Copy text */}
+          {/* Right Column: Editorial Copy Layout */}
           <div className="lg:col-span-7 space-y-6">
-            <span className="text-xs sm:text-sm font-bold text-rose-600 uppercase tracking-widest block">
-              About Suman Arogya
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-              A Modern Healthcare Clinic Dedicated to Your Wellness Journey
+            <div className="inline-flex items-center space-x-2 bg-rose-50/80 border border-rose-100 px-3 py-1 rounded-full">
+              <span className="w-1.5 h-1.5 bg-rose-500 rounded-full"></span>
+              <span className="text-xs font-bold text-rose-600 uppercase tracking-widest">
+                About Suman Arogya
+              </span>
+            </div>
+            
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+              A Modern Healthcare Clinic Dedicated to Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-rose-500">Wellness Journey</span>
             </h2>
-            <p className="text-slate-600 leading-relaxed">
+            
+            <p className="text-slate-600 leading-relaxed text-sm sm:text-base font-normal">
               Founded on the principle of bringing compassionate medical consultation under one roof, Suman Arogya is built to ease your healthcare path. We bridge clinical precision with an empathetic approach, ensuring you never feel rushed during your check-ups.
             </p>
-            <p className="text-slate-600 leading-relaxed">
+            
+            <p className="text-slate-600 leading-relaxed text-sm sm:text-base font-normal">
               Whether you are scheduling a routine preventive health assessment or seeking clinical direction for complex symptoms, our medical facility offers the modern workflows and qualified practitioners necessary to protect your physical longevity.
             </p>
             
-            <div className="pt-2">
+            <div className="pt-4">
               <Link
                 href="/about"
-                className="inline-flex items-center text-rose-600 hover:text-rose-700 font-bold transition-colors group"
+                className="inline-flex items-center justify-center bg-white hover:bg-slate-900 text-slate-800 hover:text-white border border-slate-200 hover:border-slate-900 font-bold text-sm px-5 py-3 rounded-xl shadow-sm transition-all duration-300 group"
               >
                 <span>Read More About Our Medical Staff</span>
-                <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform text-rose-500 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
@@ -100,21 +119,37 @@ export default function About() {
 
         </div>
 
-        {/* Bottom Layout Grid: Core Clinical Value Pillars */}
-        <div className="border-t border-slate-100 pt-16">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h3 className="text-2xl font-bold text-slate-900">Why Hundreds of Families Trust Us</h3>
-            <p className="text-slate-500 mt-2 text-sm sm:text-base">We approach general consultations differently by prioritizing structural values.</p>
+        {/* Bottom Layout Grid: Core Value Cards */}
+        <div className="border-t border-slate-200/60 pt-20">
+          <div className="max-w-2xl mx-auto text-center mb-16 space-y-2">
+            <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight sm:text-3xl">
+              Why Hundreds of Families Trust Us
+            </h3>
+            <p className="text-slate-500 text-sm">
+              We approach general consultations differently by prioritizing structural values.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {coreValues.map((value, idx) => (
-              <div key={idx} className="p-6 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-xl hover:shadow-slate-100 transition-all duration-300">
-                <div className="p-3 bg-rose-50 w-fit rounded-xl mb-4">
-                  {value.icon}
+              <div 
+                key={idx} 
+                className="group p-8 rounded-2xl border border-slate-200/60 bg-white hover:border-transparent shadow-sm hover:shadow-2xl hover:shadow-slate-200/80 transition-all duration-300 relative flex flex-col justify-between"
+              >
+                {/* Micro Gradient Top Line Highlight on Hover */}
+                <div className="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl bg-gradient-to-r from-fuchsia-500 to-rose-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                <div>
+                  <div className="p-2.5 bg-rose-50 border border-rose-100/50 w-fit rounded-xl mb-6 text-rose-600 group-hover:bg-rose-500 group-hover:text-white transition-colors duration-300">
+                    {value.icon}
+                  </div>
+                  <h4 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-fuchsia-600 transition-colors duration-200">
+                    {value.title}
+                  </h4>
+                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-normal">
+                    {value.description}
+                  </p>
                 </div>
-                <h4 className="text-lg font-bold text-slate-900 mb-2">{value.title}</h4>
-                <p className="text-slate-600 text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
