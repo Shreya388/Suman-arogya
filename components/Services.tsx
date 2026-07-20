@@ -1,147 +1,215 @@
 import Link from "next/link";
+import React from "react";
 
 interface Service {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  image: string; 
   tags: string[];
+  diseasesManaged: string[];
+  clinicalApproach: string;
 }
 
 const clinicServices: Service[] = [
   {
-    title: "General Medicine",
-    description: "Comprehensive health assessments, routine check-ups, and expert management for acute and chronic conditions.",
-    tags: ["Routine Checkups", "Chronic Care", "Fever & Flu"],
-    icon: (
-      <svg className="w-6 h-6 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-      </svg>
-    ),
+    title: "Metabolic & Endocrine Disorders",
+    description: "Comprehensive medical management for complex hormonal disruptions, blood sugar instability, and glandular dysfunction.",
+    clinicalApproach: "HbA1c optimization, target insulin management, lipid profiling, and endocrine restoration tracking.",
+    image: "https://media.istockphoto.com/id/2223257274/photo/middle-aged-caucasian-doctor-consulting-middle-aged-hispanic-man-with-diabetes.jpg?s=612x612&w=0&k=20&c=nIFN80DZCt76V2kICtaPrbG0z9jIWjy0TqH-bnL73zc=",
+    tags: ["Diabetes", "Thyroid", "Hormones"],
+    diseasesManaged: [
+      "Type 2 Diabetes Mellitus & Prediabetes",
+      "Hypothyroidism & Hyperthyroidism (Hashimoto's/Graves')",
+      "Metabolic Syndrome & Severe Insulin Resistance",
+      "Polycystic Ovary Syndrome (PCOS)",
+      "Adrenal Fatigue & Cortisol Imbalances"
+    ],
   },
   {
-    title: "Pediatric Consultation",
-    description: "Specialized, gentle medical care for infants, children, and adolescents focusing on growth, development, and immunizations.",
-    tags: ["Child Health", "Vaccinations", "Growth Tracking"],
-    icon: (
-      <svg className="w-6 h-6 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    title: "Gastrointestinal & Proctology Care",
+    description: "Specialized clinical diagnosis and treatment pathways for upper gastrointestinal inflammation and lower colorectal vascular/tissue disorders.",
+    clinicalApproach: "Anorectal evaluations, mucosal healing protocols, and therapeutic gut microbiome restructuring.",
+    image: "https://media.istockphoto.com/id/1399397921/photo/gastroenterologist-consultation-treatment-of-stomach-diseases-and-ulcers-doctor-palpates.jpg?s=612x612&w=0&k=20&c=SbbEw8VRZQGZQe1TBq-waDG4ZzXnjuQBlamBL0ghFBU=",
+    tags: ["Piles / Hemorrhoids", "GERD", "IBS"],
+    diseasesManaged: [
+      "Piles (Internal & External Hemorrhoids)",
+      "Anal Fissures & Fistulas",
+      "Gastroesophageal Reflux Disease (GERD) & Acid Reflux",
+      "Irritable Bowel Syndrome (IBS) & Chronic Colitis",
+      "Non-Alcoholic Fatty Liver Disease (NAFLD)"
+    ],
   },
   {
-    title: "Cardiology Screening",
-    description: "Preventive heart evaluations, blood pressure control, and specialized diagnostic review for optimal heart health.",
-    tags: ["ECG Review", "Hypertension", "Heart Risk Analysis"],
-    icon: (
-      <svg className="w-6 h-6 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-      </svg>
-    ),
+    title: "Clinical Dermatology & Autoimmune Skin Care",
+    description: "Targeted medical management for chronic inflammatory skin barriers, systemic autoimmune outbreaks, and cellular dermatological conditions.",
+    clinicalApproach: "Topical modulated therapies, systematic allergy mapping, and epidermal barrier defense repair.",
+    // Fixed with a stable Unsplash medical image for reliable loading
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80",
+    tags: ["Psoriasis", "Eczema", "Dermatitis"],
+    diseasesManaged: [
+      "Psoriasis (Plaque, Guttate, and Scalp)",
+      "Atopic Dermatitis (Severe Eczema)",
+      "Chronic Urticaria (Hives) & Severe Acne Vulgaris",
+      "Rosacea & Inflammatory Skin Flush Profiles",
+      "Fungal Infections (Tinea / Candidiasis)"
+    ],
   },
   {
-    title: "Diet & Wellness Counseling",
-    description: "Personalized lifestyle and nutrition roadmaps to combat weight issues, metabolic syndromes, and lifestyle health challenges.",
-    tags: ["Weight Management", "Diabetes Diet", "Nutrition Plans"],
-    icon: (
-      <svg className="w-6 h-6 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    title: "Cardiovascular & Circulatory Management",
+    description: "Diagnostic frameworks optimized to address deep arterial strain, chronic vascular inflammation, and structural heart health risks.",
+    clinicalApproach: "Hypertensive mapping, arterial stress profiling, and preventive lipidology.",
+    image: "https://media.istockphoto.com/id/2195018820/photo/female-physician-expert-measuring-blood-pressure-at-a-consultation-with-girl.jpg?s=612x612&w=0&k=20&c=zP8w2zx1wMCpkB2_45hYCLR7DxDo-IE4aF95BIKpPsw=",
+    tags: ["Hypertension", "Cholesterol", "Circulation"],
+    diseasesManaged: [
+      "Essential & Secondary Hypertension (High Blood Pressure)",
+      "Hyperlipidemia (Critical High Cholesterol & Triglycerides)",
+      "Peripheral Artery Disease & Poor Vascular Circulation",
+      "Chronic Venous Insufficiency (Varicose Vein Stasis)",
+      "Arrhythmia Screening (Palpitations & Tachycardia Monitoring)"
+    ],
   },
   {
-    title: "Geriatric (Elderly) Care",
-    description: "Comprehensive medical assessments focused on the complex health and medication needs of older adults.",
-    tags: ["Age-Related Illness", "Mobility Advice", "Medication Audit"],
-    icon: (
-      <svg className="w-6 h-6 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-      </svg>
-    ),
+    title: "Respiratory & Allergy Management",
+    description: "Advanced clinical support for chronic airway inflammation, allergen hypersensitivity profiles, and obstructive pulmonary conditions.",
+    clinicalApproach: "Pulmonary function testing analysis, allergen panel tracing, and mucosal immune stabilization.",
+    image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
+    tags: ["Asthma", "Allergies", "Bronchitis"],
+    diseasesManaged: [
+      "Bronchial Asthma & Exercise-Induced Bronchospasm",
+      "Chronic Obstructive Pulmonary Disease (COPD)",
+      "Allergic Rhinitis & Sinusitis Inflammations",
+      "Chronic Recurrent Bronchitis & Airway Hyperreactivity",
+      "Environmental & Occupational Dust Sensitivities"
+    ],
   },
   {
-    title: "Preventive Health Screenings",
-    description: "Proactive lab evaluations and customized diagnostic profiling to catch asymptomatic healthcare vulnerabilities early.",
-    tags: ["Full Body Labs", "Risk Profiling", "Cancer Screening"],
-    icon: (
-      <svg className="w-6 h-6 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-      </svg>
-    ),
+    title: "Musculoskeletal & Joint Care",
+    description: "Integrative physical and medical restoration for degenerative joint deterioration, chronic spinal loading, and connective tissue pain.",
+    clinicalApproach: "Joint mobility diagnostics, inflammation mitigation infusions, and structural rehabilitation mapping.",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+    tags: ["Arthritis", "Joint Pain", "Spine Care"],
+    diseasesManaged: [
+      "Osteoarthritis (Knee, Hip, and Spine Degeneration)",
+      "Rheumatoid Arthritis & Autoimmune Joint Swelling",
+      "Chronic Lower Back Pain & Lumbar Disc Strain",
+      "Cervical Spondylosis & Neck Stiffness",
+      "Fibromyalgia & Generalized Myofascial Pain Syndrome"
+    ],
   },
 ];
 
 export default function Services() {
   return (
-    <section className="py-16 md:py-24 bg-slate-50">
+    <section className="py-20 md:py-28 bg-[#fafafa]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs sm:text-sm font-bold text-rose-600 uppercase tracking-widest block">
-            Our Medical Specialities
+        {/* Section Heading Area */}
+        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+          <span className="text-xs sm:text-sm font-bold text-teal-600 uppercase tracking-widest block">
+            Clinical Scope Directory
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-            Comprehensive Consultation Services Built For Your Family
+          <h2 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-[1.15]">
+            Targeted Disease Management & Diagnostic Specialities
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base">
-            We deliver holistic, precise clinical treatments across several domains. Explore our key consultation pillars below.
+          <p className="text-slate-500 text-base font-light max-w-2xl mx-auto">
+            Review the explicit chronic medical conditions, diseases, and acute disorders managed comprehensively across our internal clinical panels.
           </p>
         </div>
 
-        {/* Services Layout Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Long-Form Deep Directory Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {clinicServices.map((service, index) => (
             <div 
               key={index} 
-              className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between"
+              className="bg-white border border-slate-200/60 rounded-3xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.01)] hover:shadow-[0_20px_40px_rgba(225,29,72,0.04)] transition-all duration-300 group flex flex-col justify-between"
             >
               <div>
-                {/* Icon Circle */}
-                <div className="p-3 bg-rose-50 text-rose-600 rounded-xl w-fit mb-6 group-hover:bg-rose-600 group-hover:text-white transition-all duration-300">
-                  {service.icon}
+                {/* Real Medical Photography Container */}
+                <div className="h-60 w-full bg-slate-100 relative overflow-hidden border-b border-slate-100">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute top-4 right-4 flex flex-wrap gap-1.5">
+                    {service.tags.map((tag, idx) => (
+                      <span key={idx} className="text-[10px] uppercase font-bold tracking-wider bg-white/95 backdrop-blur shadow-sm text-slate-700 px-2.5 py-1 rounded-lg">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Service Text details */}
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-rose-600 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  {service.description}
-                </p>
+                <div className="p-8 sm:p-10">
+                  {/* Primary Labels */}
+                  <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-teal-600 transition-colors duration-200">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
+                    {service.description}
+                  </p>
+
+                  {/* Clinical Focus Segment */}
+                  <div className="bg-slate-50/70 rounded-xl p-4 border border-slate-100 mb-8">
+                    <span className="block text-[11px] font-bold uppercase tracking-wider text-teal-600 mb-1.5">
+                      Clinical Treatment Focus
+                    </span>
+                    <p className="text-xs text-slate-500 leading-relaxed font-medium">
+                      {service.clinicalApproach}
+                    </p>
+                  </div>
+
+                  {/* Disease Mappings */}
+                  <div className="border-t border-slate-100 pt-6">
+                    <span className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-teal-600" />
+                      Specific Conditions & Diseases Managed:
+                    </span>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {service.diseasesManaged.map((disease, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-xs font-semibold text-slate-700">
+                          <span className="text-teal-500 select-none font-bold">↳</span>
+                          <span className="leading-tight">{disease}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
 
-              {/* Dynamic tag badges */}
-              <div>
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
-                  {service.tags.map((tag, idx) => (
-                    <span 
-                      key={idx} 
-                      className="text-[11px] bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-md"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              {/* Bottom dynamic links */}
+              <div className="mx-8 sm:mx-10 pb-6 pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
+                <span className="text-[11px] font-mono font-medium text-slate-400 tracking-wider">
+                  Clinic Track: MED-0{index + 1}
+                </span>
+                <Link 
+                  href="/contact" 
+                  className="text-xs font-bold text-teal-600 hover:text-teal-700 flex items-center gap-1 transition-colors"
+                >
+                  Schedule Evaluation <span>→</span>
+                </Link>
               </div>
 
             </div>
           ))}
         </div>
 
-        {/* Bottom Banner callouts */}
-        <div className="mt-16 bg-gradient-to-r from-rose-600 to-rose-700 rounded-2xl p-8 md:p-12 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left space-y-2">
-            <h4 className="text-xl md:text-2xl font-bold">Need a specialized custom diagnostic map?</h4>
-            <p className="text-rose-100 text-sm max-w-xl">
-              Connect with our clinic support desk to figure out which medical professional aligns best with your existing symptoms.
+        {/* Premium Action Callout */}
+        <div className="mt-20 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 rounded-[2.5rem] p-8 md:p-16 text-white shadow-2xl relative overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(225,29,72,0.1),transparent_40%)] pointer-events-none" />
+          
+          <div className="space-y-4 max-w-2xl relative z-10">
+            <h4 className="text-3xl font-black tracking-tight">Looking for a specific disease option not listed?</h4>
+            <p className="text-slate-400 text-sm md:text-base font-light leading-relaxed">
+              Our clinical care directory encompasses over 150+ sub-acute and chronic medical configurations. Reach out to our registration desk to confirm panel support for your direct diagnostic referral.
             </p>
           </div>
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 relative z-10 w-full md:w-auto">
             <Link
               href="/contact"
-              className="inline-block bg-white text-rose-700 font-bold px-6 py-3 rounded-xl hover:bg-rose-50 transition-colors shadow-md text-sm"
+              className="w-full md:w-auto inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:translate-y-[-1px] text-sm tracking-wide"
             >
-              Contact Desk Support
+              Contact Medical Intake Desk
             </Link>
           </div>
         </div>

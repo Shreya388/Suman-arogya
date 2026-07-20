@@ -1,6 +1,5 @@
-// components/About.tsx
 import Link from "next/link";
-import Image from "next/image";
+import React from "react";
 
 interface CoreValue {
   title: string;
@@ -10,28 +9,28 @@ interface CoreValue {
 
 const coreValues: CoreValue[] = [
   {
-    title: "Patient-Centric Care",
-    description: "Your health, comfort, and safety come first. We customize every consultation process to your precise health history.",
+    title: "Prakriti-Centric Treatment",
+    description: "Your constitutional blueprint comes first. We map every therapeutic herb and lifestyle plan to your exact Vata, Pitta, and Kapha metabolic state.",
     icon: (
-      <svg className="w-5 h-5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
       </svg>
     ),
   },
   {
-    title: "Expert Consultations",
-    description: "Gain direct access to board-certified medical specialists with decades of combined clinical treatment experience.",
+    title: "Expert Vaidya Faculty",
+    description: "Gain direct clinical access to certified Ayurvedic doctors and senior practitioners with decades of combined Nadi Pariksha diagnostic experience.",
     icon: (
-      <svg className="w-5 h-5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
   },
   {
-    title: "Advanced Diagnostics",
-    description: "We utilize modern medical screening technologies to ensure early, accurate detection and reliable treatment roadmaps.",
+    title: "Advanced Bio-Purification",
+    description: "We orchestrate traditional clinical Panchakarma and cellular detox programs inside highly precise, modern medical clean-room setups.",
     icon: (
-      <svg className="w-5 h-5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
       </svg>
     ),
@@ -50,58 +49,57 @@ export default function About() {
           <div className="lg:col-span-5 order-last lg:order-first relative">
             <div className="relative mx-auto max-w-[400px] lg:max-w-none aspect-[4/5] sm:w-[90%]">
               {/* Geometric Decorative Underlays */}
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-fuchsia-100 rounded-3xl -z-10 opacity-60 dynamic-pulse"></div>
-              <div className="absolute -bottom-10 -right-6 w-48 h-48 bg-rose-50 rounded-full -z-10 opacity-80 blur-2xl"></div>
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-emerald-50 rounded-3xl -z-10 opacity-70"></div>
+              <div className="absolute -bottom-10 -right-6 w-48 h-48 bg-amber-50 rounded-full -z-10 opacity-80 blur-2xl"></div>
               
               {/* Premium Asymmetric Border Frame */}
               <div className="absolute inset-0 border border-slate-200/80 rounded-3xl translate-x-4 translate-y-4 -z-10"></div>
               
               {/* Main Medical Image Canvas */}
               <div className="w-full h-full relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-200 border border-white">
-                <Image
-                  src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80"
-                  alt="Suman Arogya Medical Practice"
-                  fill
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                  sizes="(max-w-7xl) 40vw, 500px"
+                <img
+                  src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRtrHUMzYPOza39wjFs5x9MM7DouOSVhyA_kGdJPSFdXz1Eg5aql5hA1fKnA2atQoD4eS8hK8Drifk2mCo"
+                  alt="Suman Arogya Ayurvedic Clinical Consultation Suite"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  loading="eager"
                 />
                 
                 {/* Floating Glassmorphic Mission Plate */}
-                <div className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-white/40 shadow-xl">
-                  <span className="text-[10px] font-bold text-fuchsia-700 uppercase tracking-widest block mb-1">Our Mission</span>
+                <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-white/40 shadow-xl">
+                  <span className="text-[10px] font-bold text-emerald-800 uppercase tracking-widest block mb-1">Our Mission</span>
                   <p className="text-slate-800 text-xs font-semibold leading-relaxed">
-                    To deliver accessible, high-quality medical consultation solutions that foster long-term health and preventive wellness.
+                    To deliver evidence-based, clinically validated Ayurvedic therapeutic solutions that target the root causes of metabolic and tissue disorders.
                   </p>
                 </div>
               </div>
 
-              {/* Minimalist Floating ISO Badge */}
+              {/* Minimalist Floating Certification Badge */}
               <div className="absolute -top-4 right-4 bg-slate-900 text-white px-3.5 py-2 rounded-xl shadow-lg flex items-center space-x-2 border border-slate-800">
                 <div className="w-2 h-2 bg-emerald-400 rounded-full animate-ping"></div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-300">ISO 9001:2015</span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-300">NABH Accredited Clinic</span>
               </div>
             </div>
           </div>
 
           {/* Right Column: Editorial Copy Layout */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center space-x-2 bg-rose-50/80 border border-rose-100 px-3 py-1 rounded-full">
-              <span className="w-1.5 h-1.5 bg-rose-500 rounded-full"></span>
-              <span className="text-xs font-bold text-rose-600 uppercase tracking-widest">
-                About Suman Arogya
+            <div className="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-100/60 px-3 py-1 rounded-full">
+              <span className="w-1.5 h-1.5 bg-emerald-600 rounded-full"></span>
+              <span className="text-xs font-bold text-emerald-700 uppercase tracking-widest">
+                About Suman Arogya Ayurveda
               </span>
             </div>
             
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-              A Modern Healthcare Clinic Dedicated to Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-rose-500">Wellness Journey</span>
+              Ancient Medical Science Refined for Your Modern Wellness Journey
             </h2>
             
             <p className="text-slate-600 leading-relaxed text-sm sm:text-base font-normal">
-              Founded on the principle of bringing compassionate medical consultation under one roof, Suman Arogya is built to ease your healthcare path. We bridge clinical precision with an empathetic approach, ensuring you never feel rushed during your check-ups.
+              Founded on the principle of bridging authentic Vedic therapeutic systems with contemporary diagnostic accountability, Suman Arogya offers an advanced environment for disease reversal. We emphasize personalized internal healing patterns, ensuring your medical path addresses system imbalance rather than simple symptom suppression.
             </p>
             
             <p className="text-slate-600 leading-relaxed text-sm sm:text-base font-normal">
-              Whether you are scheduling a routine preventive health assessment or seeking clinical direction for complex symptoms, our medical facility offers the modern workflows and qualified practitioners necessary to protect your physical longevity.
+              Whether you are scheduling comprehensive Nadi Pariksha pulse profiling, dealing with chronic digestive disruptions, or mapping targeted panchakarma cellular detoxification protocols, our facility brings clinical infrastructure and credentialed Vaidyas directly to your health planning.
             </p>
             
             <div className="pt-4">
@@ -109,8 +107,8 @@ export default function About() {
                 href="/about"
                 className="inline-flex items-center justify-center bg-white hover:bg-slate-900 text-slate-800 hover:text-white border border-slate-200 hover:border-slate-900 font-bold text-sm px-5 py-3 rounded-xl shadow-sm transition-all duration-300 group"
               >
-                <span>Read More About Our Medical Staff</span>
-                <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform text-rose-500 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <span>Meet Our Certified Vaidyas & Staff</span>
+                <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform text-emerald-600 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
@@ -123,10 +121,10 @@ export default function About() {
         <div className="border-t border-slate-200/60 pt-20">
           <div className="max-w-2xl mx-auto text-center mb-16 space-y-2">
             <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight sm:text-3xl">
-              Why Hundreds of Families Trust Us
+              Why Hundreds of Families Trust Suman Arogya
             </h3>
             <p className="text-slate-500 text-sm">
-              We approach general consultations differently by prioritizing structural values.
+              We approach chronic disease resolution differently by prioritizing root internal system balances.
             </p>
           </div>
 
@@ -137,13 +135,13 @@ export default function About() {
                 className="group p-8 rounded-2xl border border-slate-200/60 bg-white hover:border-transparent shadow-sm hover:shadow-2xl hover:shadow-slate-200/80 transition-all duration-300 relative flex flex-col justify-between"
               >
                 {/* Micro Gradient Top Line Highlight on Hover */}
-                <div className="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl bg-gradient-to-r from-fuchsia-500 to-rose-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl bg-gradient-to-r from-emerald-500 to-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 <div>
-                  <div className="p-2.5 bg-rose-50 border border-rose-100/50 w-fit rounded-xl mb-6 text-rose-600 group-hover:bg-rose-500 group-hover:text-white transition-colors duration-300">
+                  <div className="p-2.5 bg-emerald-50 border border-emerald-100/50 w-fit rounded-xl mb-6 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
                     {value.icon}
                   </div>
-                  <h4 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-fuchsia-600 transition-colors duration-200">
+                  <h4 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors duration-200">
                     {value.title}
                   </h4>
                   <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-normal">

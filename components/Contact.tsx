@@ -26,7 +26,7 @@ export default function Contact() {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs sm:text-sm font-bold text-rose-600 uppercase tracking-widest block">
+          <span className="text-xs sm:text-sm font-bold text-teal-600 uppercase tracking-widest block">
             Get In Touch
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
@@ -45,7 +45,7 @@ export default function Contact() {
             
             {/* Phone Card */}
             <div className="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm flex items-start space-x-4">
-              <div className="p-3 bg-rose-50 text-rose-600 rounded-xl">
+              <div className="p-3 bg-teal-50 text-teal-600 rounded-xl">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -59,7 +59,7 @@ export default function Contact() {
 
             {/* Email Card */}
             <div className="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm flex items-start space-x-4">
-              <div className="p-3 bg-rose-50 text-rose-600 rounded-xl">
+              <div className="p-3 bg-teal-50 text-teal-600 rounded-xl">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
@@ -73,7 +73,7 @@ export default function Contact() {
 
             {/* Address Card */}
             <div className="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm flex items-start space-x-4">
-              <div className="p-3 bg-rose-50 text-rose-600 rounded-xl">
+              <div className="p-3 bg-teal-50 text-teal-600 rounded-xl">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -111,7 +111,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-rose-500 text-slate-800"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-teal-500 text-slate-800"
                     placeholder="John Doe"
                   />
                 </div>
@@ -124,7 +124,7 @@ export default function Contact() {
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-rose-500 text-slate-800"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-teal-500 text-slate-800"
                     placeholder="+91 98765 43210"
                   />
                 </div>
@@ -139,7 +139,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-rose-500 text-slate-800"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-teal-500 text-slate-800"
                   placeholder="john@example.com"
                 />
               </div>
@@ -153,14 +153,14 @@ export default function Contact() {
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-rose-500 text-slate-800 resize-none"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-teal-500 text-slate-800 resize-none"
                   placeholder="Tell us briefly about your inquiry or setup request..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold py-3.5 px-6 rounded-xl transition-colors shadow-md shadow-rose-100"
+                className="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3.5 px-6 rounded-xl transition-colors shadow-md shadow-teal-100"
               >
                 Send Message
               </button>

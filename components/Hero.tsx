@@ -1,80 +1,142 @@
+"use client"
+"use react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-export default function Hero() {
+interface Slide {
+  badge: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  image: string;
+  ctaText: string;
+}
+
+const slides: Slide[] = [
+  {
+    badge: "Root Cause Diagnostics",
+    title: "Precision Pulse Assessment (Nadi Pariksha)",
+    subtitle: "Discover Your Unique Metabolic Constitution",
+    description: "Move past surface symptom containment. Our chief Vaidyas utilize advanced radial artery pulse reading to locate physiological imbalances across Vata, Pitta, and Kapha configurations before they manifest as chronic distress.",
+    image: "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRtrHUMzYPOza39wjFs5x9MM7DouOSVhyA_kGdJPSFdXz1Eg5aql5hA1fKnA2atQoD4eS8hK8Drifk2mCo",
+    ctaText: "Book Pulse Evaluation"
+  },
+  {
+    badge: "Pharmacology & Formulations",
+    title: "Bio-Available Botanical Compounding",
+    subtitle: "Custom Farm-to-Clinic Herbal Therapeutics",
+    description: "Every body requires a distinct concentration. We match your physiological profile to tailored herbal extractions, high-potency roots, and personalized dietary alignments designed to trigger targeted tissue repair.",
+    image: "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTdpJs5ZuOIVlnNY1_j8w-HAUREJld-r-ZQEZVWyIonK4ASvQamL16BEq82Egu9bdsTmWh4oRxUdRLeo-8",
+    ctaText: "Explore Herbal Therapy"
+  },
+  {
+    badge: "Deep Cellular Detoxification",
+    title: "Clinical Panchakarma Therapy Tracks",
+    subtitle: "Systemic Bio-Purification & Toxic Extraction",
+    description: "Purge deep-seated cellular metabolic waste (Ama) through medically monitored Shirodhara, Abhyanga, and targeted internal cleansing protocols executed in sterile, premium sanctuary environments.",
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcS1DdZugQeothj4hR6mLZhfZTCP7hlLw0_ng64USqqyAfW40pDfEVFr8NAQu4e6ZsLoDuR7IEqX_6e6fbM",
+    ctaText: "Schedule Panchakarma Detox"
+  },
+  {
+    badge: "Integrative Medical Suite",
+    title: "Evidence-Based Ayurvedic Consultation",
+    subtitle: "Ancient Medical Science in a Modern Clinic",
+    description: "Experience the synergy of centuries-old clinical wisdom paired with contemporary diagnostic screening. Work 1-on-1 with accredited Ayurvedic physicians to reverse chronic autoimmune, digestive, and hormonal patterns.",
+    image: "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcT5KOyKyXrsXGHQGYw_v-p4QoOSUzlBueKkD4CeBrzfU_FtNH4tWpJImVLW19yUMWpUzBQeaBFtD2y2IKw",
+    ctaText: "Consult Our Physicians"
+  }
+];
+
+export default function HeroCarousel() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 6000); // Transitions slide every 6 seconds
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="relative bg-gradient-to-br from-fuchsia-50 via-white to-slate-50 overflow-hidden py-16 md:py-24 lg:py-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          {/* Left Column: Heading, Subheading & Action Buttons */}
-          <div className="space-y-6 lg:col-span-7 text-center lg:text-left z-10">
-            
-            {/* Trust Badge */}
-            <div className="inline-flex items-center space-x-2 bg-rose-100 text-rose-800 px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide">
-              <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-rose-500"></span>
-              </span>
-              <span>Accepting New Patients Today</span>
-            </div>
-
-            {/* Main Heading */}
-            <h1 className="text-5xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-              <p className="font-thin">Your Health, Our <span className="text-rose-500">Priorities</span>.</p> Trusted Consultation.
-            </h1>
-
-            {/* Subheading */}
-            <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Welcome to Suman Arogya. Connect with experienced medical professionals for personalized, compassionate healthcare and expert clinical consultations tailored to your wellbeing.
-            </p>
-
-            {/* Crucial Clinic Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-              {/* Primary Call To Action */}
-              <Link
-                href="/book-appointment"
-                className="w-full sm:w-auto text-center bg-rose-500 hover:bg-fuchsia-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-fuchsia-200 transition-all transform hover:-translate-y-0.5"
-              >
-                Book Consultation
-              </Link>
-
-              {/* Secondary Call To Action */}
-              <Link
-                href="/services"
-                className="w-full sm:w-auto text-center bg-white hover:bg-slate-50 text-slate-800 font-semibold px-8 py-4 rounded-xl border border-slate-200 shadow-sm transition-all"
-              >
-                Explore Specialities
-              </Link>
-            </div>
-
-            {/* Micro-Trust Info */}
-            <div className="grid grid-cols-3 gap-4 pt-8 border-t border-slate-100 max-w-md mx-auto lg:mx-0 text-center lg:text-left">
-              <div>
-                <p className="text-2xl font-bold text-slate-900">15+</p>
-                <p className="text-xs text-slate-500 font-medium">Expert Doctors</p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-slate-900">99%</p>
-                <p className="text-xs text-slate-500 font-medium">Happy Patients</p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-slate-900">24/7</p>
-                <p className="text-xs text-slate-500 font-medium">Emergency Care</p>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Right Column: Aesthetic Graphic/Placeholder Asset Layout */}
-          <div className="lg:col-span-5 relative flex justify-center">
+    <section className="relative w-full h-[90vh] min-h-[680px] bg-slate-950 overflow-hidden">
+      {/* Dynamic Slides */}
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out flex items-center ${
+            index === current ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
+        >
+          {/* Background Image with Dark Professional Overlays */}
+          <div className="absolute inset-0">
             <img
-        src="https://images.pexels.com/photos/7789602/pexels-photo-7789602.jpeg"
-        alt="Medical facility consultation area"
-        className="w-full h-auto rounded-2xl shadow-md object-cover max-h-[500px]"
-      />
+              src={slide.image}
+              alt={slide.title}
+              className="w-full h-full object-cover object-center transform scale-105 transition-transform duration-[6000ms] ease-out"
+              style={{ transform: index === current ? "scale(1)" : "scale(1.05)" }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent md:bg-gradient-to-r" />
+            <div className="absolute inset-0 bg-black/40" />
           </div>
 
+          {/* Slide Text Content */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20 text-white">
+            <div className="max-w-2xl space-y-6">
+              
+              <div className="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-md border border-emerald-400/30 px-3 py-1.5 rounded-full">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-[11px] uppercase tracking-widest font-bold text-emerald-300">
+                  {slide.badge}
+                </span>
+              </div>
+
+              <div className="space-y-2">
+                <span className="block text-emerald-400 font-medium text-sm md:text-base tracking-wide">
+                  {slide.subtitle}
+                </span>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
+                  {slide.title}
+                </h1>
+              </div>
+
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
+                {slide.description}
+              </p>
+
+              <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
+                <Link
+                  href="/consultation"
+                  className="w-full sm:w-auto text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all text-sm tracking-wide"
+                >
+                  {slide.ctaText}
+                </Link>
+                <Link
+                  href="/about"
+                  className="w-full sm:w-auto text-center bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium px-8 py-4 rounded-xl backdrop-blur-sm transition-all text-sm tracking-wide"
+                >
+                  Our Medical Philosophy
+                </Link>
+              </div>
+
+            </div>
+          </div>
         </div>
+      ))}
+
+      {/* Manual Indicator Dots Controls */}
+      <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-center items-center gap-3">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`transition-all duration-300 rounded-full ${
+              index === current 
+                ? "w-8 h-2 bg-emerald-500" 
+                : "w-2 h-2 bg-white/40 hover:bg-white/70"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );

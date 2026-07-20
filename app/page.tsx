@@ -6,6 +6,7 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import DoctorsPreview from "@/components/DoctorsPreview";
+import PatientJourney from "@/components/patient-journey";
 
 export default function Home() {
   return (
@@ -14,9 +15,11 @@ export default function Home() {
 
     <About />
 
+    <Services />
+    
     <DoctorsPreview />
 
-    <Services />
+    <PatientJourney />
 
     <Testimonials />
 
