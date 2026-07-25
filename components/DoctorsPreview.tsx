@@ -1,126 +1,159 @@
 // components/DoctorsPreview.tsx
 import Link from "next/link";
 import Image from "next/image";
+import suman from "../public/suman.png";
 
-interface Doctor {
+interface ExpertProfile {
   name: string;
-  role: string;
-  qualifications: string;
+  designation: string;
+  degree: string;
   experience: string;
-  speciality: string;
-  image: string; // Real image source URL
+  focusArea: string;
+  tagline: string;
+  casesResolved: string;
+  image: string;
 }
 
-const featuredDoctors: Doctor[] = [
+const eliteExperts: ExpertProfile[] = [
   {
     name: "Dr. Suman Sharma",
-    role: "Chief Medical Consultant",
-    qualifications: "MD, MBBS (Internal Medicine)",
-    experience: "15+ Years Experience",
-    speciality: "Chronic Care & Metabolic Disorders",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=256&h=256&q=80",
+    designation: "Chief Medical Officer & Master Vaidya",
+    degree: "MD (Internal Medicine), BAMS, Ph.D. (Ayurveda)",
+    experience: "16+ Years Experience",
+    focusArea: "Metabolic & Autoimmune Restoration",
+    tagline: "Specializing in deep-rooted chronic reversal protocols through integrated Nadi diagnostics.",
+    casesResolved: "3,500+ Chronic Cases",
+    image: suman,
   },
   {
     name: "Dr. Rohan Verma",
-    role: "Senior Consultant Dermatologist",
-    qualifications: "MD, DVD (Dermatology & Hair Care)",
+    designation: "Director of Clinical Dermatology",
+    degree: "MD (Dermatology), DVD, Fellowship in Laser Aesthetics",
     experience: "12+ Years Experience",
-    speciality: "Advanced Dermatology & Trichology",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=256&h=256&q=80",
+    focusArea: "Advanced Trichology & Skin Regeneration",
+    tagline: "Bridging modern dermatological laser interventions with constitutional blood purification therapies.",
+    casesResolved: "4,200+ Treatments",
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&h=1000&q=80",
   },
   {
     name: "Dr. Ananya Reddy",
-    role: "Senior Gastro & Proctology Specialist",
-    qualifications: "MS, MBBS (General Surgery)",
-    experience: "10+ Years Experience",
-    speciality: "Digestive Care & Laser Proctology",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=256&h=256&q=80",
+    designation: "Head of Minimally Invasive Proctology",
+    degree: "MS (General Surgery), MBBS, FMAS (Minimal Access)",
+    experience: "11+ Years Experience",
+    focusArea: "Gastrointestinal & Advanced Laser Surgery",
+    tagline: "Pioneering pain-free, non-surgical and laser-assisted resolutions for complex digestive disorders.",
+    casesResolved: "2,900+ Procedures",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&h=1000&q=80",
   },
 ];
 
 export default function DoctorsPreview() {
   return (
-    <section className="w-full bg-white py-20 border-b border-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-slate-900 text-white py-28 relative overflow-hidden">
+      {/* Background Glow Accents */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-xs font-bold text-rose-500 uppercase tracking-widest bg-rose-50 px-3 py-1 rounded-full">
-            Clinical Leadership
-          </span>
-          <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl tracking-tight">
-            Meet Our Experienced Medical Professionals
-          </h2>
-          <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
-            Get personalized, evidence-based consultations from our dedicated team of senior healthcare specialists.
-          </p>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="max-w-2xl space-y-4">
+            <div className="inline-flex items-center space-x-2 bg-emerald-950 border border-emerald-800/60 px-3.5 py-1.5 rounded-full">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="text-xs font-bold text-emerald-300 uppercase tracking-widest">
+                Elite Medical Board
+              </span>
+            </div>
+            <h2 className="text-3xl font-extrabold text-white sm:text-5xl tracking-tight leading-tight">
+              Direct Access to India&apos;s Leading Clinical Experts
+            </h2>
+            <p className="text-slate-400 text-base sm:text-lg">
+              Our multidisciplinary panel blends decades of hospital surgical experience with ancient Ayurvedic mastery.
+            </p>
+          </div>
+
+          <div className="flex-shrink-0">
+            <Link
+              href="/our-doctors"
+              className="inline-flex items-center justify-center space-x-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm px-8 py-4 rounded-2xl transition-all shadow-xl shadow-emerald-500/20 active:scale-95 group"
+            >
+              <span>View Full Roster</span>
+              <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
         </div>
 
-        {/* Doctors Layout Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {featuredDoctors.map((doctor, index) => (
+        {/* Cinematic Horizontal Bento Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {eliteExperts.map((expert, index) => (
             <div 
               key={index}
-              className="group bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col items-center p-6 text-center"
+              className="group relative bg-slate-800/65 backdrop-blur-xl rounded-3xl border border-slate-700/60 overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-500 shadow-2xl"
             >
-              {/* Doctor Avatar Profile (Swapped from SVG to Next.js Image) */}
-              <div className="w-28 h-28 rounded-full shadow-md group-hover:scale-105 transition-transform duration-300 mb-6 relative overflow-visible bg-slate-100">
+              {/* Image Canvas */}
+              <div className="w-full aspect-[4/5] relative overflow-hidden bg-slate-800">
                 <Image
-                  src={doctor.image}
-                  alt={doctor.name}
+                  src={expert.image}
+                  alt={expert.name}
                   fill
-                  sizes="112px"
-                  className="rounded-full object-cover"
-                  priority={index === 0}
+                  unoptimized
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700 filter grayscale-[15%] group-hover:grayscale-0"
                 />
-                {/* Online Indicator Dot */}
-                <span className="absolute bottom-1 right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full z-10"></span>
-              </div>
-
-              {/* Profile Details */}
-              <div className="space-y-2 flex-grow">
-                <h3 className="text-lg font-bold text-slate-800 group-hover:text-fuchsia-600 transition-colors">
-                  {doctor.name}
-                </h3>
-                <p className="text-xs font-semibold text-rose-500 tracking-wider uppercase">
-                  {doctor.role}
-                </p>
-                <p className="text-xs font-medium text-slate-400">
-                  {doctor.qualifications}
-                </p>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-90" />
                 
-                <hr className="w-12 border-slate-100 mx-auto my-3" />
-                
-                <div className="bg-slate-50 rounded-xl px-4 py-2.5 text-xs text-slate-600 font-medium space-y-1">
-                  <div className="text-slate-800 font-semibold">{doctor.speciality}</div>
-                  <div className="text-slate-400 text-[11px]">{doctor.experience}</div>
+                {/* Clean, Non-Overlapping Top Badging Row */}
+                <div className="absolute top-4 inset-x-4 flex items-center justify-between gap-2 z-20 pointer-events-none">
+                  <span className="bg-emerald-600/95 text-white font-semibold text-[11px] px-3 py-1.5 rounded-xl backdrop-blur-md shadow-md border border-emerald-500/30 truncate">
+                    {expert.focusArea}
+                  </span>
+                  <span className="bg-slate-900/90 text-emerald-400 font-bold text-[11px] px-3 py-1.5 rounded-xl backdrop-blur-md shadow-md border border-slate-700 whitespace-nowrap">
+                    {expert.casesResolved}
+                  </span>
                 </div>
               </div>
 
-              {/* Action Trigger Card */}
-              <div className="w-full pt-6 mt-4 border-t border-slate-50">
-                <Link
-                  href="/book-appointment"
-                  className="w-full inline-block bg-slate-50 hover:bg-fuchsia-50 text-slate-700 hover:text-fuchsia-600 font-semibold text-xs py-2.5 rounded-xl transition-colors"
-                >
-                  Book Slot Direct
-                </Link>
+              {/* Content Body */}
+              <div className="p-8 space-y-6 -mt-16 relative z-20 flex-grow flex flex-col justify-between">
+                <div className="space-y-3 bg-slate-900/95 backdrop-blur-xl p-6 rounded-2xl border border-slate-800 shadow-xl">
+                  <div>
+                    <span className="text-xs font-bold text-amber-400 uppercase tracking-wider block mb-1">
+                      {expert.designation}
+                    </span>
+                    <h3 className="text-2xl font-extrabold text-white group-hover:text-emerald-400 transition-colors">
+                      {expert.name}
+                    </h3>
+                    <p className="text-emerald-300/90 text-xs font-semibold mt-1">
+                      {expert.degree}
+                    </p>
+                    <div className="inline-block mt-2 bg-slate-800/80 border border-slate-700/60 px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-300">
+                      ⏳ {expert.experience}
+                    </div>
+                  </div>
+                  
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-light pt-1 border-t border-slate-800">
+                    &ldquo;{expert.tagline}&rdquo;
+                  </p>
+                </div>
+
+                {/* Primary Action Button */}
+                <div className="pt-2">
+                  <Link
+                    href="/book-appointment"
+                    className="w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-sm py-4 px-6 rounded-xl transition-all duration-300 shadow-lg shadow-emerald-500/25 active:scale-95 group/btn"
+                  >
+                    <span>Request Private Consultation</span>
+                    <svg className="w-4 h-4 transform group-hover/btn:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7-7" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
+
             </div>
           ))}
-        </div>
-
-        {/* View All Section Action Footer */}
-        <div className="text-center mt-12">
-          <Link
-            href="/our-doctors"
-            className="inline-flex items-center text-sm font-bold text-fuchsia-600 hover:text-rose-500 transition-colors group"
-          >
-            View Our Full Medical Directory
-            <svg className="w-4 h-4 ml-1.5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7-7" />
-            </svg>
-          </Link>
         </div>
 
       </div>

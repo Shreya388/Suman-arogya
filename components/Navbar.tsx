@@ -109,14 +109,14 @@ export default function ClinicHeader() {
   return (
     <header className="w-full relative z-50">
       {/* 1. Continuous Scrolling Informational Bar */}
-      <div className="w-full bg-slate-900 py-2 overflow-hidden border-b border-slate-900">
+      <div className="w-full bg-teal-600 py-2 overflow-hidden border-b border-teal-600">
         <div className="whitespace-nowrap animate-marquee flex items-center text-white font-medium text-xs sm:text-sm font-medium">
           <span className="mx-4">
-            If you are struggling with piles, psoriasis, diabetes, skin problems, or other health conditions, Call: 7002470396 for a personalized consultation.
+            If you are struggling with piles, psoriasis, diabetes, skin problems, or other health conditions, Call: +91 8700693622 for a personalized consultation.
           </span>
           {/* Duplicate the span so it appears seamless */}
           <span className="mx-4">
-            If you are struggling with piles, psoriasis, diabetes, skin problems, or other health conditions, Call:  7002470396 for a personalized consultation.
+            If you are struggling with piles, psoriasis, diabetes, skin problems, or other health conditions, Call:  +91 8700693622 for a personalized consultation.
           </span>
         </div>
       </div>
@@ -163,7 +163,7 @@ export default function ClinicHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-slate-600 hover:text-teal-600 font-semibold text-sm transition-colors"
+                  className="text-gray-900 hover:text-teal-600 font-medium text-sm transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -178,7 +178,7 @@ export default function ClinicHeader() {
               >
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="text-slate-600 hover:text-teal-600 font-semibold text-sm transition-colors flex items-center space-x-1 py-2 focus:outline-none"
+                  className="text-gray-900 hover:text-teal-600 font-medium text-sm transition-colors flex items-center space-x-1 py-2 focus:outline-none"
                 >
                   <span>Diseases</span>
                   <svg className={`w-4 h-4 transform transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -188,7 +188,7 @@ export default function ClinicHeader() {
 
                 {/* Desktop Mega Layout Panel */}
                 {isDropdownOpen && (
-                  <div className="absolute left-1/2 -translate-x-1/2 mt-0 w-[980px] lg:w-[1180px] bg-white border border-slate-100 rounded-2xl shadow-2xl p-6 grid grid-cols-4 gap-6 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
+                  <div className="absolute left-1/2 -translate-x-1/2 mt-1 w-[980px] lg:w-[1180px] bg-white border border-slate-100 rounded-2xl shadow-2xl p-6 grid grid-cols-4 gap-6 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
                     {diseaseCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
                         <h4 className="text-xs font-bold text-teal-700 uppercase tracking-wider pb-1.5 border-b border-teal-50">
@@ -215,7 +215,7 @@ export default function ClinicHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-600 hover:text-teal-600 font-semibold text-sm transition-colors"
+                  className="text-gray-900 hover:text-teal-600 font-medium text-sm transition-colors"
                 >
                   {link.label}
                 </Link>

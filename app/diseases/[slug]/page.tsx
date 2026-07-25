@@ -28,6 +28,9 @@ export default async function DiseasePage({ params }: PageProps) {
     ayurvedicPerspective: {
       doshaImbalance: "Individual Tridosha profiling required",
       rootCauseText: "Accumulation of toxic systemic waste (Ama) clogging cellular communication channels.",
+      ahar: ["Warm, freshly cooked light meals", "Easily digestible soups and steamed vegetables", "Sipping warm water infused with digestive spices (cumin, coriander)"],
+      vihar: ["Adhering to a consistent sleep-wake schedule (Dinacharya)", "Gentle restorative yoga postures and breathing exercises (Pranayama)", "Avoiding daytime napping and excessive physical strain"],
+      aushadh: ["Custom tailored herbal combinations following Nadi Pariksha pulse reading", "Classical formulations aimed at correcting Agni and balancing Doshas"],
       herbalRemedies: ["Custom tailored herbal combinations following Nadi Pariksha pulse reading."],
       lifestyleAdjustments: ["Regulated daily rhythms (Dinacharya) designed around metabolic capacity."]
     },
@@ -117,36 +120,70 @@ export default async function DiseasePage({ params }: PageProps) {
               </div>
             </div>
 
-            {/* Deep Ayurvedic Natural Intervention Article */}
-            <div className="bg-emerald-50/20 border border-emerald-100/50 rounded-2xl p-6 md:p-8 space-y-6">
+            {/* Deep Ayurvedic Natural Intervention Article (Ahar, Vihar, Aushadh) */}
+            <div className="bg-emerald-50/20 border border-emerald-100/50 rounded-2xl p-6 md:p-8 space-y-8">
               <div className="border-b border-emerald-100/60 pb-4">
                 <h3 className="text-xl font-bold text-emerald-900 tracking-tight flex items-center">
-                  Natural Ayurvedic Reversal Strategy
+                  Ayurvedic Therapeutic Protocol (Ahar • Vihar • Aushadh)
                 </h3>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-3">
-                  <h4 className="font-bold text-emerald-800 text-xl tracking-wide uppercase">Therapeutic Herbs</h4>
-                  <ul className="space-y-2">
-                    {displayData.ayurvedicPerspective.herbalRemedies.map((remedy, i) => (
-                      <li key={i} className="text-lg sm:text-base text-slate-700 flex items-start">
-                        <span className="text-emerald-600 mr-2 font-bold">🌿</span> {remedy}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                {/* Ahar (Diet) */}
+                <div className="bg-white/70 border border-emerald-100/60 rounded-xl p-5 space-y-3 shadow-sm">
+                  <div className="flex items-center space-y-0.5 flex-col items-start">
+                    <span className="text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-2.5 py-1 rounded-md">Dietary Guidelines</span>
+                    <h4 className="font-bold text-slate-900 text-lg mt-2">Ahar (आहार)</h4>
+                  </div>
+                  <ul className="space-y-2 pt-1">
+                    {(displayData.ayurvedicPerspective.ahar || [
+                      "Nourishing, freshly prepared warm meals",
+                      "Inclusion of digestive spices like cumin, ginger, and turmeric"
+                    ]).map((item: string, i: number) => (
+                      <li key={i} className="text-sm text-slate-700 flex items-start">
+                        <span className="text-emerald-600 mr-2 font-bold">🍲</span> {item}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="space-y-3">
-                  <h4 className="font-bold text-amber-800 text-xl tracking-wide uppercase">Dinacharya & Lifestyle</h4>
-                  <ul className="space-y-2">
-                    {displayData.ayurvedicPerspective.lifestyleAdjustments.map((lifestyle, i) => (
-                      <li key={i} className="text-lg sm:text-base text-slate-700 flex items-start">
-                        <span className="text-amber-600 mr-2 font-bold">☀️</span> {lifestyle}
+                {/* Vihar (Lifestyle) */}
+                <div className="bg-white/70 border border-amber-100/60 rounded-xl p-5 space-y-3 shadow-sm">
+                  <div className="flex items-center space-y-0.5 flex-col items-start">
+                    <span className="text-xs font-bold text-amber-700 uppercase tracking-widest bg-amber-50 px-2.5 py-1 rounded-md">Lifestyle Habits</span>
+                    <h4 className="font-bold text-slate-900 text-lg mt-2">Vihar (विहार)</h4>
+                  </div>
+                  <ul className="space-y-2 pt-1">
+                    {(displayData.ayurvedicPerspective.vihar || [
+                      "Structured daily routine (Dinacharya) aligned with circadian rhythms",
+                      "Calming breathing exercises and targeted yoga asanas"
+                    ]).map((item: string, i: number) => (
+                      <li key={i} className="text-sm text-slate-700 flex items-start">
+                        <span className="text-amber-600 mr-2 font-bold">☀️</span> {item}
                       </li>
                     ))}
                   </ul>
                 </div>
+
+                {/* Aushadh (Medication/Herbs) */}
+                <div className="bg-white/70 border border-emerald-100/60 rounded-xl p-5 space-y-3 shadow-sm">
+                  <div className="flex items-center space-y-0.5 flex-col items-start">
+                    <span className="text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-2.5 py-1 rounded-md">Botanical Formulations</span>
+                    <h4 className="font-bold text-slate-900 text-lg mt-2">Aushadh (औषध)</h4>
+                  </div>
+                  <ul className="space-y-2 pt-1">
+                    {(displayData.ayurvedicPerspective.aushadh || displayData.ayurvedicPerspective.herbalRemedies || [
+                      "Tailored herbal decoctions (Kwath) and churnas",
+                      "Herbo-mineral compounds prescribed after evaluation"
+                    ]).map((item: string, i: number) => (
+                      <li key={i} className="text-sm text-slate-700 flex items-start">
+                        <span className="text-emerald-600 mr-2 font-bold">🌿</span> {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
               </div>
 
               <div className="pt-4 border-t border-emerald-100/60 space-y-3">
