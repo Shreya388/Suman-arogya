@@ -11,6 +11,8 @@ export interface DiseaseDetail {
     herbalRemedies: string[];
     lifestyleAdjustments: string[];
     ahar?: string[];
+    vihar?: string[];
+    aushadh?: string[];
   };
   detailedArticle: string;
 }
