@@ -10,6 +10,7 @@ export interface DiseaseDetail {
     rootCauseText: string;
     herbalRemedies: string[];
     lifestyleAdjustments: string[];
+    ahar?: string[];
   };
   detailedArticle: string;
 }
