@@ -1,6 +1,6 @@
 // components/DoctorsPreview.tsx
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import suman from "../public/suman.png";
 
 interface ExpertProfile {
@@ -11,7 +11,7 @@ interface ExpertProfile {
   focusArea: string;
   tagline: string;
   casesResolved: string;
-  image: string;
+  image: string | StaticImageData; // Allow both static imports and string URLs
 }
 
 const eliteExperts: ExpertProfile[] = [
@@ -23,7 +23,7 @@ const eliteExperts: ExpertProfile[] = [
     focusArea: "Metabolic & Autoimmune Restoration",
     tagline: "Specializing in deep-rooted chronic reversal protocols through integrated Nadi diagnostics.",
     casesResolved: "3,500+ Chronic Cases",
-    image: suman,
+    image: suman, // ✅ Fixed: Passed variable directly without curly braces
   },
   {
     name: "Dr. Rohan Verma",
