@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
+import Image, { StaticImageData } from "next/image";
+import logo from "../public/logo.png";
+
 interface NavLink {
   label: string;
   href: string;
@@ -141,18 +144,9 @@ export default function ClinicHeader() {
             {/* Medical Logo */}
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center space-x-2">
-                <span className="p-2 bg-teal-50 text-teal-600 rounded-lg">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
-                  </svg>
-                </span>
+                
                 <div className="flex flex-col">
-                  <span className="text-xl font-bold tracking-tight text-slate-800 leading-none">
-                    Suman Arogya
-                  </span>
-                  <span className="text-[10px] text-teal-600 font-semibold tracking-widest uppercase mt-0.5">
-                    Consultation Clinic
-                  </span>
+                  <Image src={logo} className="w-20 h-auto" alt="Logo" />
                 </div>
               </Link>
             </div>
@@ -163,7 +157,7 @@ export default function ClinicHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-900 hover:text-teal-600 font-medium text-sm transition-colors"
+                  className="text-gray-900 hover:text-teal-600 font-medium text-[15px] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -178,7 +172,7 @@ export default function ClinicHeader() {
               >
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="text-gray-900 hover:text-teal-600 font-medium text-sm transition-colors flex items-center space-x-1 py-2 focus:outline-none"
+                  className="text-gray-900 hover:text-teal-600 font-medium text-[15px] transition-colors flex items-center space-x-1 py-2 focus:outline-none"
                 >
                   <span>Diseases</span>
                   <svg className={`w-4 h-4 transform transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -215,7 +209,7 @@ export default function ClinicHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-900 hover:text-teal-600 font-medium text-sm transition-colors"
+                  className="text-gray-900 hover:text-teal-600 font-medium text-[15px] transition-colors"
                 >
                   {link.label}
                 </Link>
