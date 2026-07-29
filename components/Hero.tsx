@@ -203,7 +203,7 @@ export default function DiseaseCarousel() {
                     <div className="bg-slate-950/80 p-3 rounded-xl border border-slate-800 shadow-inner">
                       <div className="flex items-center gap-2 text-cyan-300 font-semibold mb-1">
                         <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
-                        <h4 className="text-xs sm:text-sm">Ahar (Dietary Regimen)</h4>
+                        <h4 className="text-xs sm:text-sm">Vihar (Lifestyle & Routine)</h4>
                       </div>
                       <p className="text-slate-300 text-xs leading-relaxed pl-4">{slide.vihar}</p>
                     </div>
