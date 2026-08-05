@@ -73,7 +73,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {stats.map((stat, i) => (
             <div key={i} className="bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all hover:translate-y-[-4px] hover:shadow-[0_20px_40px_rgb(0,0,0,0.04)]">
-              <div className="text-4xl font-black tracking-tight text-fuchsia-900 mb-2">{stat.number}</div>
+              <div className="text-4xl font-black tracking-tight text-teal-500 mb-2">{stat.number}</div>
               <div className="text-base font-bold text-slate-900">{stat.label}</div>
               <div className="text-sm text-slate-400 mt-1">{stat.sub}</div>
             </div>
@@ -152,7 +152,7 @@ export default function AboutPage() {
 
       {/* 6. Bold Editorial Call to Action */}
       <section className="max-w-7xl mx-auto px-6 pb-24">
-        <div className="bg-gradient-to-br from-rose-600 to-fuchsia-800 text-white rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-teal-900/10">
+        <div className="bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-teal-900/10">
           {/* Internal graphics layer */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_40%)]" />
           

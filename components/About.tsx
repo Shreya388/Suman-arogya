@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image"; // Fixed: Image is a default import from next/image
+import treatment from "../public/treatment.png";
 
 interface CoreValue {
   title: string;
@@ -57,11 +59,11 @@ export default function About() {
               
               {/* Main Medical Image Canvas */}
               <div className="w-full h-full relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-200 border border-white">
-                <img
-                  src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRtrHUMzYPOza39wjFs5x9MM7DouOSVhyA_kGdJPSFdXz1Eg5aql5hA1fKnA2atQoD4eS8hK8Drifk2mCo"
+                <Image
+                  src={treatment}
                   alt="Suman Arogya Ayurvedic Clinical Consultation Suite"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                  loading="eager"
+                  priority
                 />
                 
                 {/* Floating Glassmorphic Mission Plate */}
@@ -90,7 +92,7 @@ export default function About() {
               </span>
             </div>
             
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+            <h2 className="text-2xl sm:text-2xl lg:text-2xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
               Ancient Medical Science Refined for Your Modern Wellness Journey
             </h2>
             
@@ -135,13 +137,13 @@ export default function About() {
                 className="group p-8 rounded-2xl border border-slate-200/60 bg-white hover:border-transparent shadow-sm hover:shadow-2xl hover:shadow-slate-200/80 transition-all duration-300 relative flex flex-col justify-between"
               >
                 {/* Micro Gradient Top Line Highlight on Hover */}
-                <div className="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl bg-gradient-to-r from-emerald-500 to-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 <div>
-                  <div className="p-2.5 bg-emerald-50 border border-emerald-100/50 w-fit rounded-xl mb-6 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                  <div className="p-2.5 bg-emerald-50 border border-emerald-100/50 w-fit rounded-xl mb-6 text-emerald-700 group-hover:bg-white group-hover:text-white transition-colors duration-300">
                     {value.icon}
                   </div>
-                  <h4 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors duration-200">
+                  <h4 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-emerald-700">
                     {value.title}
                   </h4>
                   <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-normal">

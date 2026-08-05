@@ -121,7 +121,7 @@ export default function ServicesPage() {
           </span>
           <h1 className="text-5xl sm:text-7xl font-black tracking-tight text-slate-900 mb-8 max-w-4xl leading-[1.05]">
             Targeted medical solutions. <br />
-            <span className="bg-gradient-to-r from-rose-600 to-fuchsia-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-teal-600 to-black-500 bg-clip-text text-transparent">
               No generic checklists.
             </span>
           </h1>

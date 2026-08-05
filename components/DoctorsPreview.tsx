@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import suman from "../public/suman.png";
+import oshi from "../public/oshi.png";
 
 interface ExpertProfile {
   name: string;
@@ -36,14 +37,14 @@ const eliteExperts: ExpertProfile[] = [
     image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&h=1000&q=80",
   },
   {
-    name: "Dr. Ananya Reddy",
+    name: "Dr. Oshi Chauhan",
     designation: "Head of Minimally Invasive Proctology",
     degree: "MS (General Surgery), MBBS, FMAS (Minimal Access)",
     experience: "11+ Years Experience",
     focusArea: "Gastrointestinal & Advanced Laser Surgery",
     tagline: "Pioneering pain-free, non-surgical and laser-assisted resolutions for complex digestive disorders.",
     casesResolved: "2,900+ Procedures",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&h=1000&q=80",
+    image: oshi,
   },
 ];
 

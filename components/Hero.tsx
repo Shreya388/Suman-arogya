@@ -26,7 +26,7 @@ const diseaseSlides: DiseaseSlide[] = [
       "Requires consistent glucose monitoring and dietary management",
       "Early intervention prevents long-term neuropathy and nephropathy"
     ],
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&q=80&w=1600",
     ctaText: "Explore Diabetes Care",
     ahar: "Bitter gourds, barley, complex millets, and fiber-rich greens avoiding refined sugars.",
     vihar: "Regular brisk morning walks, yoga asanas like Mandukasana, and active stress management.",
@@ -42,7 +42,7 @@ const diseaseSlides: DiseaseSlide[] = [
       "Common signs include insulin resistance and skin changes",
       "Managed through weight optimization, diet, and hormone therapy"
     ],
-    image: "https://images.unsplash.com/photo-1512290900722-9a702082b2d5?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=1600",
     ctaText: "PCOS Wellness Tracks",
     ahar: "Warm, anti-inflammatory foods rich in flaxseeds, cinnamon, and fresh organic vegetables.",
     vihar: "Consistent daily routine, regular aerobic exercise, and restorative sleep patterns.",
@@ -58,7 +58,7 @@ const diseaseSlides: DiseaseSlide[] = [
       "Directly linked to sodium intake, stress, and vascular stiffness",
       "Controlled via lifestyle modifications, exercise, and antihypertensives"
     ],
-    image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=1600",
     ctaText: "Heart & Vascular Care",
     ahar: "Low-sodium, cooling foods like pomegranate, garlic, and potassium-rich fruits.",
     vihar: "Pranayama (Anulom Vilom), meditation, and avoiding sudden anger or emotional triggers.",
@@ -74,7 +74,7 @@ const diseaseSlides: DiseaseSlide[] = [
       "Highly responsive to high-fiber diets, hydration, and topical care",
       "Severe or thrombosed cases may require minor clinical interventions"
     ],
-    image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=1600",
     ctaText: "Digestive & Proctology Support",
     ahar: "High-fiber diet, buttermilk, ripe papayas, and adequate warm water hydration.",
     vihar: "Avoiding prolonged sitting, regular bowel habits, and avoiding suppression of natural urges.",
@@ -90,7 +90,7 @@ const diseaseSlides: DiseaseSlide[] = [
       "Requires an open, stigma-free clinical dialogue and root-cause testing",
       "Integrates lifestyle adjustments, counseling, and specialized therapies"
     ],
-    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1600",
     ctaText: "Confidential Consultation",
     ahar: "Nutritious milk preparations, dry fruits, saffron, and wholesome organic ghee.",
     vihar: "Balanced daily regimen, adequate physical rest, and partner communication.",
@@ -117,104 +117,104 @@ export default function DiseaseCarousel() {
             index === current ? "opacity-100 z-10 relative lg:absolute" : "opacity-0 z-0 pointer-events-none hidden lg:flex"
           }`}
         >
-          {/* Background Image Container with Rich Contrast Overlay */}
+          {/* Background Image with Dark Theme Soft Gradient Overlay */}
           <div className="absolute inset-0 w-full h-full">
             <img
               src={slide.image}
               alt={slide.title}
-              className="w-full h-full object-cover object-center transition-transform duration-[7000ms] ease-out brightness-90"
-              style={{ transform: index === current ? "scale(1)" : "scale(1.05)" }}
+              className="w-full h-full object-cover object-center transition-transform duration-[7000ms] ease-out scale-105"
             />
-            {/* Rich gradient overlay from dark blue/slate to translucent to keep background imagery clear and punchy */}
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/85 to-slate-900/50 z-10" />
-            <div className="absolute inset-0 bg-black/40 z-10" />
+            {/* Soft dark wash overlay so text remains crisp and readable */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/75 to-black/70 backdrop-blur-[2px]" />
           </div>
 
           {/* Slide Content Container - Split Grid Layout */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20 text-white my-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20 my-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               
-              {/* Left Side: Original Content */}
+              {/* Left Side: Information & Actions */}
               <div className="lg:col-span-7 space-y-4 lg:space-y-5">
-                <div className="inline-flex items-center gap-2 bg-cyan-500/20 backdrop-blur-md border border-cyan-400/40 px-3.5 py-1.5 rounded-full shadow-sm">
-                  <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-                  <span className="text-[11px] uppercase tracking-widest font-bold text-cyan-300">
+                <div className="inline-flex items-center gap-2 bg-teal-200 border border-teal-200 px-3.5 py-1.5 rounded-full shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse" />
+                  <span className="text-[11px] uppercase tracking-widest font-bold text-teal-800">
                     {slide.badge}
                   </span>
                 </div>
 
                 <div className="space-y-1">
-                  <span className="block text-cyan-400 font-semibold text-sm md:text-base tracking-wide drop-shadow-sm">
+                  <span className="block text-teal-200 font-bold text-sm md:text-base tracking-wide">
                     {slide.category}
                   </span>
-                  <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-white drop-shadow-md">
+                  <h1 className="text-2xl sm:text-4xl lg:text-5xl font-white tracking-tight leading-[1.1] text-white">
                     {slide.title}
                   </h1>
                 </div>
 
-                <p className="text-slate-200 text-xs sm:text-base leading-relaxed font-normal drop-shadow">
+                <p className="text-white text-xs sm:text-base leading-relaxed font-light">
                   {slide.description}
                 </p>
 
-                <div className="space-y-1.5 pt-1">
+                <div className="space-y-2 pt-1">
                   {slide.keyPoints.map((point, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-slate-100 font-medium">
-                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0" />
+                    <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-white font-medium">
+                      <span className="w-2 h-2 rounded-full bg-teal-500 flex-shrink-0" />
                       <span>{point}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-2 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+                <div className="pt-3 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
                   <Link
                     href="/consultation"
-                    className="w-full sm:w-auto text-center bg-cyan-600 hover:bg-cyan-500 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all text-sm tracking-wide"
+                    className="w-full sm:w-auto text-center bg-teal-600 hover:bg-teal-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition-all text-sm tracking-wide"
                   >
                     {slide.ctaText}
                   </Link>
                   <Link
                     href="/conditions"
-                    className="w-full sm:w-auto text-center bg-slate-800/80 hover:bg-slate-800 border border-slate-700 text-white font-semibold px-8 py-3.5 rounded-xl shadow-md backdrop-blur-sm transition-all text-sm tracking-wide"
+                    className="w-full sm:w-auto text-center bg-transparent hover:border-white border border-white text-white font-semibold px-8 py-3.5 rounded-xl shadow-sm transition-all text-sm tracking-wide"
                   >
                     View All Conditions
                   </Link>
                 </div>
               </div>
 
-              {/* Right Side: Ahar, Vihar & Aushadh Panel */}
+              {/* Right Side: Protocol Panel */}
               <div className="lg:col-span-5 pb-8 lg:pb-0">
-                <div className="bg-slate-900/95 backdrop-blur-md border border-cyan-500/30 p-5 lg:p-6 rounded-2xl shadow-2xl space-y-3.5 lg:space-y-4">
-                  <div className="border-b border-cyan-500/20 pb-3">
-                    <span className="text-xs uppercase tracking-widest text-cyan-400 font-bold">Holistic Protocol</span>
-                    <h3 className="text-base lg:text-lg font-bold text-white">Ahar • Vihar • Aushadh</h3>
+                <div className="bg-white/95 backdrop-blur-md p-5 lg:p-6 rounded-2xl shadow-xl border border-slate-200/80 space-y-4">
+                  <div className="border-b border-slate-100 pb-3 flex items-center justify-between">
+                    <div>
+                      <span className="text-[10px] uppercase tracking-widest text-teal-700 font-bold">Holistic Protocol</span>
+                      <h3 className="text-sm lg:text-base font-extrabold text-slate-900">Ahar • Vihar • Aushadh</h3>
+                    </div>
                   </div>
 
-                  <div className="space-y-3 text-sm">
+                  <div className="space-y-3 text-xs">
                     {/* Ahar */}
-                    <div className="bg-slate-950/80 p-3 rounded-xl border border-slate-800 shadow-inner">
-                      <div className="flex items-center gap-2 text-cyan-300 font-semibold mb-1">
-                        <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
-                        <h4 className="text-xs sm:text-sm">Ahar (Dietary Regimen)</h4>
+                    <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                      <div className="flex items-center gap-1.5 text-teal-800 font-bold mb-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                        <h4>Ahar (Dietary Regimen)</h4>
                       </div>
-                      <p className="text-slate-300 text-xs leading-relaxed pl-4">{slide.ahar}</p>
+                      <p className="text-slate-600 text-xs leading-relaxed pl-3">{slide.ahar}</p>
                     </div>
 
                     {/* Vihar */}
-                    <div className="bg-slate-950/80 p-3 rounded-xl border border-slate-800 shadow-inner">
-                      <div className="flex items-center gap-2 text-cyan-300 font-semibold mb-1">
-                        <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
-                        <h4 className="text-xs sm:text-sm">Vihar (Lifestyle & Routine)</h4>
+                    <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                      <div className="flex items-center gap-1.5 text-teal-800 font-bold mb-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                        <h4>Vihar (Lifestyle & Routine)</h4>
                       </div>
-                      <p className="text-slate-300 text-xs leading-relaxed pl-4">{slide.vihar}</p>
+                      <p className="text-slate-600 text-xs leading-relaxed pl-3">{slide.vihar}</p>
                     </div>
 
                     {/* Aushadh */}
-                    <div className="bg-slate-950/80 p-3 rounded-xl border border-slate-800 shadow-inner">
-                      <div className="flex items-center gap-2 text-cyan-300 font-semibold mb-1">
-                        <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
-                        <h4 className="text-xs sm:text-sm">Aushadh (Herbal Formulations)</h4>
+                    <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                      <div className="flex items-center gap-1.5 text-teal-800 font-bold mb-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                        <h4>Aushadh (Herbal Formulations)</h4>
                       </div>
-                      <p className="text-slate-300 text-xs leading-relaxed pl-4">{slide.aushadh}</p>
+                      <p className="text-slate-600 text-xs leading-relaxed pl-3">{slide.aushadh}</p>
                     </div>
                   </div>
                 </div>
@@ -226,15 +226,15 @@ export default function DiseaseCarousel() {
       ))}
 
       {/* Slide Navigation Dots */}
-      <div className="absolute bottom-3 lg:bottom-8 left-0 right-0 z-30 flex justify-center items-center gap-2 lg:gap-3">
+      <div className="absolute bottom-3 lg:bottom-6 left-0 right-0 z-30 flex justify-center items-center gap-2 lg:gap-3">
         {diseaseSlides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
             className={`transition-all duration-300 rounded-full ${
               index === current 
-                ? "w-8 h-2 bg-cyan-400 shadow-sm" 
-                : "w-2 h-2 bg-white/40 hover:bg-white/70"
+                ? "w-8 h-2 bg-teal-600 shadow-sm" 
+                : "w-2 h-2 bg-slate-400/60 hover:bg-slate-600"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

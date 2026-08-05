@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
-
+import AppointmentModal from "./AppointmentModal";
 import Image, { StaticImageData } from "next/image";
 import logo from "../public/logo.png";
 
@@ -81,6 +81,7 @@ export default function ClinicHeader() {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [isMobileAccordionOpen, setIsMobileAccordionOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState<boolean>(false);
 
 
   const [isSticky, setIsSticky] = useState<boolean>(false);
@@ -112,7 +113,7 @@ export default function ClinicHeader() {
   return (
     <header className="w-full relative z-50">
       {/* 1. Continuous Scrolling Informational Bar */}
-      <div className="w-full bg-teal-600 py-2 overflow-hidden border-b border-teal-600">
+      <div className="w-full bg-teal-950 py-2 overflow-hidden border-b border-teal-950">
         <div className="whitespace-nowrap animate-marquee flex items-center text-white font-medium text-xs sm:text-sm font-medium">
           <span className="mx-4">
             If you are struggling with piles, psoriasis, diabetes, skin problems, or other health conditions, Call: +91 8700693622 for a personalized consultation.
@@ -144,7 +145,7 @@ export default function ClinicHeader() {
             {/* Medical Logo */}
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center space-x-2">
-                
+
                 <div className="flex flex-col">
                   <Image src={logo} className="w-20 h-auto" alt="Logo" />
                 </div>
@@ -218,12 +219,12 @@ export default function ClinicHeader() {
 
             {/* Desktop Right Action Button */}
             <div className="hidden md:flex items-center">
-              <Link
-                href="/book-appointment"
-                className="bg-teal-400 hover:bg-teal-500 text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-md transition-all transform hover:-translate-y-0.5"
+              <button
+                onClick={() => setIsBookingModalOpen(true)}
+                className="bg-teal-900 hover:bg-teal-950 text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-md transition-all transform hover:-translate-y-0.5 cursor-pointer"
               >
                 Book Consultation
-              </Link>
+              </button>
             </div>
 
             {/* Mobile Menu Toggle */}
@@ -323,6 +324,12 @@ export default function ClinicHeader() {
       </nav>
       {/* Add this spacer line */}
       {isSticky && <div className="h-20 w-full" />}
+
+      {/* Consultation Booking Popup Modal */}
+      <AppointmentModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+      />
     </header>
   );
 }
