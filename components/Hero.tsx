@@ -125,7 +125,7 @@ export default function DiseaseCarousel() {
               className="w-full h-full object-cover object-center transition-transform duration-[7000ms] ease-out scale-105"
             />
             {/* Soft dark wash overlay so text remains crisp and readable */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/75 to-black/70 backdrop-blur-[2px]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/50 to-black/40 backdrop-blur-[2px]" />
           </div>
 
           {/* Slide Content Container - Split Grid Layout */}
