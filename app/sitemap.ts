@@ -36,6 +36,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         changeFrequency: 'weekly',
         priority: 0.9,
 
+    },
+    // added the blog post of diabetes in blog
+    {
+        url: `${baseUrl}/blog/early-warning-signs-of-diabetes`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+
     }
   ];
 }
