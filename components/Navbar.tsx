@@ -111,10 +111,10 @@ export default function ClinicHeader() {
   }, []);
 
   return (
-    <header className="w-full relative z-50">
+    <header className="w-full relative pt-14">
       {/* 1. Continuous Scrolling Informational Bar */}
-      <div className="w-full bg-teal-950 py-2 overflow-hidden border-b border-teal-950">
-        <div className="whitespace-nowrap animate-marquee flex items-center text-white font-medium text-xs sm:text-sm font-medium">
+      <div className="fixed top-0 left-0 right-0 z-[60] w-full bg-teal-950 py-4 overflow-hidden border-b border-teal-950">
+        <div className="whitespace-nowrap animate-marquee flex items-center text-white font-medium text-sm sm:text-sm font-medium">
           <span className="mx-4">
             If you are struggling with piles, psoriasis, diabetes, skin problems, or other health conditions, Call: +91 8700693622 for a personalized consultation.
           </span>
@@ -137,10 +137,9 @@ export default function ClinicHeader() {
 `}</style>
 
       {/* 2. Main Navigation Bar */}
-      <nav className={`left-0 right-0 z-50 bg-white border-b border-gray-100 backdrop-blur-md bg-opacity-95 transition-all ${isSticky ? "fixed top-0 w-full shadow-md animate-in fade-in duration-200" : "relative"
-        }`}>
+      <nav className="relative z-50 bg-white border-b border-gray-200 backdrop-blur-md bg-opacity-95">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-20 items-center">
+          <div className="flex justify-between h-30 items-center">
 
             {/* Medical Logo */}
             <div className="flex-shrink-0 flex items-center">
@@ -158,7 +157,7 @@ export default function ClinicHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-900 hover:text-teal-600 font-medium text-[15px] transition-colors"
+                  className="text-gray-900 hover:text-teal-600 font-medium text-[17] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -173,7 +172,7 @@ export default function ClinicHeader() {
               >
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="text-gray-900 hover:text-teal-600 font-medium text-[15px] transition-colors flex items-center space-x-1 py-2 focus:outline-none"
+                  className="text-gray-900 hover:text-teal-600 font-medium text-[17px] transition-colors flex items-center space-x-1 py-2 focus:outline-none"
                 >
                   <span>Diseases</span>
                   <svg className={`w-4 h-4 transform transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -186,7 +185,7 @@ export default function ClinicHeader() {
                   <div className="absolute left-1/2 -translate-x-1/2 mt-1 w-[980px] lg:w-[1180px] bg-white border border-slate-100 rounded-2xl shadow-2xl p-6 grid grid-cols-4 gap-6 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
                     {diseaseCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
-                        <h4 className="text-xs font-bold text-teal-700 uppercase tracking-wider pb-1.5 border-b border-teal-50">
+                        <h4 className="text-sm font-bold text-teal-700 uppercase tracking-wider pb-1.5 border-b border-teal-50">
                           {category.title}
                         </h4>
                         <div className="flex flex-col space-y-1.5">
@@ -194,7 +193,7 @@ export default function ClinicHeader() {
                             <Link
                               key={idx}
                               href={item.href}
-                              className="text-gray-600 hover:text-teal-500 text-xs font-semibold py-0.5 transition-colors block text-left leading-relaxed"
+                              className="text-gray-600 hover:text-teal-500 text-sm font-semibold py-0.5 transition-colors block text-left leading-relaxed"
                             >
                               • {item.label}
                             </Link>
@@ -210,7 +209,7 @@ export default function ClinicHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-900 hover:text-teal-600 font-medium text-[15px] transition-colors"
+                  className="text-gray-900 hover:text-teal-600 font-medium text-[17px] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -322,8 +321,6 @@ export default function ClinicHeader() {
           </div>
         )}
       </nav>
-      {/* Add this spacer line */}
-      {isSticky && <div className="h-20 w-full" />}
 
       {/* Consultation Booking Popup Modal */}
       <AppointmentModal

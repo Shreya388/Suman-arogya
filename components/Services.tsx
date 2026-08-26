@@ -101,7 +101,7 @@ const clinicServices: Service[] = [
 export default function Services() {
   return (
     <section className="py-20 md:py-28 bg-[#fafafa]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading Area */}
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
@@ -117,7 +117,7 @@ export default function Services() {
         </div>
 
         {/* Long-Form Deep Directory Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {clinicServices.map((service, index) => (
             <div 
               key={index} 
