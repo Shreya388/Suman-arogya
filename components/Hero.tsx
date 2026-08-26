@@ -1,15 +1,15 @@
 "use client";
-import physio from "../public/physio.png";
-import bannerTwo from "../public/bannerTwo.png";
+import physio from "../public/physio.webp";
+import bannerTwo from "../public/bannerTwo.webp";
 
 import React, { useEffect, useState } from "react";
 
 const slides = [
   {
-    image: "/physio.png",
+    image: "/physio.webp",
   },
   {
-    image: "/bannerTwo.png",
+    image: "/bannerTwo.webp",
   }
 ];
 
