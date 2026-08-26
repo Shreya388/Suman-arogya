@@ -20,8 +20,8 @@ export default function DiseaseCarousel() {
     const timer = setInterval(() => {
       setCurrent((prev) =>
         prev === slides.length - 1 ? 0 : prev + 1
-      );
-    }, 3000);
+      )
+    }, 6000);
 
     return () => clearInterval(timer);
   }, []);
