@@ -10,6 +10,12 @@ const slides = [
   },
   {
     image: "/bannerTwo.webp",
+  },
+  {
+    image: "/physio.webp",
+  },
+  {
+    image: "/bannerTwo.webp",
   }
 ];
 
