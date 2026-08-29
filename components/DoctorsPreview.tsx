@@ -24,7 +24,7 @@ const eliteExperts: ExpertProfile[] = [
     focusArea: "Metabolic & Autoimmune Restoration",
     tagline: "Specializing in deep-rooted chronic reversal protocols through integrated Nadi diagnostics.",
     casesResolved: "3,500+ Chronic Cases",
-    image: suman, // ✅ Fixed: Passed variable directly without curly braces
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&h=1000&q=80", // ✅ Fixed: Passed variable directly without curly braces
   },
   {
     name: "Dr. Rohan Verma",
@@ -39,7 +39,7 @@ const eliteExperts: ExpertProfile[] = [
   {
     name: "Dr. Oshi Chauhan",
     designation: "Head of Minimally Invasive Proctology",
-    degree: "MS (General Surgery), MBBS, FMAS (Minimal Access)",
+    degree: "BPT (Bachelors in Physiotherapy)",
     experience: "11+ Years Experience",
     focusArea: "Gastrointestinal & Advanced Laser Surgery",
     tagline: "Pioneering pain-free, non-surgical and laser-assisted resolutions for complex digestive disorders.",
@@ -50,7 +50,7 @@ const eliteExperts: ExpertProfile[] = [
 
 export default function DoctorsPreview() {
   return (
-    <section className="w-full bg-slate-900 text-white py-28 relative overflow-hidden">
+    <section className="w-full bg-pink-50 text-white py-28 relative overflow-hidden">
       {/* Background Glow Accents */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -66,10 +66,10 @@ export default function DoctorsPreview() {
                 Elite Medical Board
               </span>
             </div>
-            <h2 className="text-3xl font-extrabold text-white sm:text-5xl tracking-tight leading-tight">
+            <h2 className="text-3xl font-extrabold text-gray-800 sm:text-5xl tracking-tight leading-tight">
               Direct Access to India&apos;s Leading Clinical Experts
             </h2>
-            <p className="text-slate-400 text-base sm:text-lg">
+            <p className="text-gray-800 text-base sm:text-lg">
               Our multidisciplinary panel blends decades of hospital surgical experience with ancient Ayurvedic mastery.
             </p>
           </div>
@@ -77,7 +77,7 @@ export default function DoctorsPreview() {
           <div className="flex-shrink-0">
             <Link
               href="/our-doctors"
-              className="inline-flex items-center justify-center space-x-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm px-8 py-4 rounded-2xl transition-all shadow-xl shadow-emerald-500/20 active:scale-95 group"
+              className="inline-flex items-center justify-center space-x-3 bg-pink-900 hover:bg-pink-900 text-white font-extrabold text-sm px-8 py-4 rounded-2xl transition-all shadow-xl shadow-emerald-500/20 active:scale-95 group"
             >
               <span>View Full Roster</span>
               <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -92,7 +92,7 @@ export default function DoctorsPreview() {
           {eliteExperts.map((expert, index) => (
             <div 
               key={index}
-              className="group relative bg-slate-800/65 backdrop-blur-xl rounded-3xl border border-slate-700/60 overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-500 shadow-2xl"
+              className="group relative bg-slate-800/65 backdrop-blur-xl rounded-3xl overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-500 shadow-2xl"
             >
               {/* Image Canvas */}
               <div className="w-full aspect-[4/5] relative overflow-hidden bg-slate-800">

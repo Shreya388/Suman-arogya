@@ -113,13 +113,13 @@ export default function ClinicHeader() {
   return (
     <header className="w-full relative pt-14">
       {/* 1. Continuous Scrolling Informational Bar */}
-      <div className="fixed top-0 left-0 right-0 z-[60] w-full bg-teal-950 py-4 overflow-hidden border-b border-teal-950">
-        <div className="whitespace-nowrap animate-marquee flex items-center text-white font-medium text-sm sm:text-sm font-medium">
-          <span className="mx-4">
-            If you are struggling with piles, psoriasis, diabetes, skin problems, or other health conditions, Call: +91 8700693622 for a personalized consultation.
+      <div className="fixed top-0 left-0 right-0 z-[60] w-full bg-pink-900 py-3 overflow-hidden border-b border-pink-950">
+        <div className="whitespace-nowrap animate-marquee flex items-center text-white font-medium text-md sm:text-md font-medium">
+          <span className="mx-8">
+            Get personalized care for Piles, Diabetes, Psoriasis, Skin Disorders, Thyroid Problems, Digestive Disorders, Kidney Problems, Arthritis, PCOS, High Blood Pressure, Liver Disorders, Lifestyle Diseases & more with an integrated approach combining Ayurvedic care and modern medical guidance.  📞 Call +91 8700693622 for a personalized consultation.
           </span>
-          {/* Duplicate the span so it appears seamless */}
-          <span className="mx-4">
+          {}
+          <span className="mx-8">
             If you are struggling with piles, psoriasis, diabetes, skin problems, or other health conditions, Call:  +91 8700693622 for a personalized consultation.
           </span>
         </div>
@@ -157,7 +157,7 @@ export default function ClinicHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-900 hover:text-teal-600 font-medium text-[17] transition-colors"
+                  className="text-gray-900 hover:text-pink-600 font-medium text-lg transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -172,7 +172,7 @@ export default function ClinicHeader() {
               >
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="text-gray-900 hover:text-teal-600 font-medium text-[17px] transition-colors flex items-center space-x-1 py-2 focus:outline-none"
+                  className="text-gray-900 hover:text-pink-600 font-medium text-lg transition-colors flex items-center space-x-1 py-2 focus:outline-none"
                 >
                   <span>Diseases</span>
                   <svg className={`w-4 h-4 transform transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -185,7 +185,7 @@ export default function ClinicHeader() {
                   <div className="absolute left-1/2 -translate-x-1/2 mt-1 w-[980px] lg:w-[1180px] bg-white border border-slate-100 rounded-2xl shadow-2xl p-6 grid grid-cols-4 gap-6 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
                     {diseaseCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
-                        <h4 className="text-sm font-bold text-teal-700 uppercase tracking-wider pb-1.5 border-b border-teal-50">
+                        <h4 className="text-sm font-bold text-pink-700 uppercase tracking-wider pb-1.5 border-b border-pink-50">
                           {category.title}
                         </h4>
                         <div className="flex flex-col space-y-1.5">
@@ -193,7 +193,7 @@ export default function ClinicHeader() {
                             <Link
                               key={idx}
                               href={item.href}
-                              className="text-gray-600 hover:text-teal-500 text-sm font-semibold py-0.5 transition-colors block text-left leading-relaxed"
+                              className="text-gray-600 hover:text-pink-500 text-sm font-semibold py-0.5 transition-colors block text-left leading-relaxed"
                             >
                               • {item.label}
                             </Link>
@@ -209,7 +209,7 @@ export default function ClinicHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-900 hover:text-teal-600 font-medium text-[17px] transition-colors"
+                  className="text-gray-900 hover:text-pink-600 font-medium text-lg transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -220,7 +220,7 @@ export default function ClinicHeader() {
             <div className="hidden md:flex items-center">
               <button
                 onClick={() => setIsBookingModalOpen(true)}
-                className="bg-teal-900 hover:bg-teal-950 text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-md transition-all transform hover:-translate-y-0.5 cursor-pointer"
+                className="bg-pink-900 hover:bg-pink-800 text-white font-semibold text-lg px-5 py-2.5 rounded-full shadow-md transition-all transform hover:-translate-y-0.5 cursor-pointer"
               >
                 Book Consultation
               </button>
@@ -231,7 +231,7 @@ export default function ClinicHeader() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="text-slate-500 hover:text-teal-600 p-2 focus:outline-none"
+                className="text-slate-500 hover:text-pink-600 p-2 focus:outline-none"
               >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   {isOpen ? (
@@ -254,7 +254,7 @@ export default function ClinicHeader() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block py-2 text-base font-medium text-gray-700 hover:text-teal-600 border-b border-gray-50"
+                className="block py-2 text-base font-medium text-gray-700 hover:text-pink-600 border-b border-gray-50"
               >
                 {link.label}
               </Link>
@@ -264,7 +264,7 @@ export default function ClinicHeader() {
             <div className="border-b border-gray-50 py-2">
               <button
                 onClick={() => setIsMobileAccordionOpen(!isMobileAccordionOpen)}
-                className="w-full flex justify-between items-center text-left text-base font-medium text-slate-700 hover:text-teal-600 focus:outline-none"
+                className="w-full flex justify-between items-center text-left text-base font-medium text-slate-700 hover:text-pink-600 focus:outline-none"
               >
                 <span>Diseases Treated</span>
                 <svg className={`w-4 h-4 transform transition-transform duration-200 ${isMobileAccordionOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -276,7 +276,7 @@ export default function ClinicHeader() {
                 <div className="mt-2 pl-3 space-y-4 bg-slate-50 p-3 rounded-xl max-h-[350px] overflow-y-auto">
                   {diseaseCategories.map((category, index) => (
                     <div key={index} className="space-y-1">
-                      <h5 className="text-[11px] font-bold text-teal-800 uppercase tracking-wider mt-2">
+                      <h5 className="text-[11px] font-bold text-pink-800 uppercase tracking-wider mt-2">
                         {category.title}
                       </h5>
                       {category.items.map((item, idx) => (
@@ -287,7 +287,7 @@ export default function ClinicHeader() {
                             setIsOpen(false);
                             setIsMobileAccordionOpen(false);
                           }}
-                          className="block py-1 text-sm text-gray-600 hover:text-teal-500 font-medium"
+                          className="block py-1 text-sm text-gray-600 hover:text-pink-500 font-medium"
                         >
                           {item.label}
                         </Link>
@@ -303,7 +303,7 @@ export default function ClinicHeader() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block py-2 text-base font-medium text-slate-700 hover:text-teal-600 border-b border-gray-50"
+                className="block py-2 text-base font-medium text-slate-700 hover:text-pink-600 border-b border-gray-50"
               >
                 {link.label}
               </Link>
@@ -313,7 +313,7 @@ export default function ClinicHeader() {
               <Link
                 href="/book-appointment"
                 onClick={() => setIsOpen(false)}
-                className="block text-center bg-teal-400 hover:bg-teal-50 text-white font-semibold px-4 py-3 rounded-xl shadow"
+                className="block text-center bg-pink-400 hover:bg-pink-50 text-white font-semibold px-4 py-3 rounded-xl shadow"
               >
                 Book Consultation
               </Link>
