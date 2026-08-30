@@ -113,7 +113,7 @@ export default function ClinicHeader() {
   return (
     <header className="w-full relative pt-14">
       {/* 1. Continuous Scrolling Informational Bar */}
-      <div className="fixed top-0 left-0 right-0 z-[60] w-full bg-pink-900 py-3 overflow-hidden border-b border-pink-950">
+      <div className="fixed top-0 left-0 right-0 z-[60] w-full bg-pink-900 py-3 overflow-hidden border-pink-900">
         <div className="whitespace-nowrap animate-marquee flex items-center text-white font-medium text-md sm:text-md font-medium">
           <span className="mx-8">
             Get personalized care for Piles, Diabetes, Psoriasis, Skin Disorders, Thyroid Problems, Digestive Disorders, Kidney Problems, Arthritis, PCOS, High Blood Pressure, Liver Disorders, Lifestyle Diseases & more with an integrated approach combining Ayurvedic care and modern medical guidance.  📞 Call +91 8700693622 for a personalized consultation.

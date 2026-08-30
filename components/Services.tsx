@@ -195,19 +195,19 @@ export default function Services() {
         </div>
 
         {/* Premium Action Callout */}
-        <div className="mt-20 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 rounded-[2.5rem] p-8 md:p-16 text-white shadow-2xl relative overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(225,29,72,0.1),transparent_40%)] pointer-events-none" />
+        <div className="mt-20 bg-pink-50 rounded-[2.5rem] p-8 md:p-16 text-gray-900 shadow-2xl relative overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-10">
+          
           
           <div className="space-y-4 max-w-2xl relative z-10">
             <h4 className="text-3xl font-black tracking-tight">Looking for a specific disease option not listed?</h4>
-            <p className="text-slate-400 text-sm md:text-base font-light leading-relaxed">
+            <p className="text-gray-600 text-sm md:text-base font-light leading-relaxed">
               Our clinical care directory encompasses over 150+ sub-acute and chronic medical configurations. Reach out to our registration desk to confirm panel support for your direct diagnostic referral.
             </p>
           </div>
           <div className="flex-shrink-0 relative z-10 w-full md:w-auto">
             <Link
               href="/contact"
-              className="w-full md:w-auto inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:translate-y-[-1px] text-sm tracking-wide"
+              className="w-full md:w-auto inline-flex items-center justify-center bg-pink-900 hover:bg-pink-800 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:translate-y-[-1px] text-sm tracking-wide"
             >
               Contact Medical Intake Desk
             </Link>

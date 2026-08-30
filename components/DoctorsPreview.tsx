@@ -52,17 +52,17 @@ export default function DoctorsPreview() {
   return (
     <section className="w-full bg-pink-50 text-white py-28 relative overflow-hidden">
       {/* Background Glow Accents */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="" />
+      <div className="" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl space-y-4">
-            <div className="inline-flex items-center space-x-2 bg-emerald-950 border border-emerald-800/60 px-3.5 py-1.5 rounded-full">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-xs font-bold text-emerald-300 uppercase tracking-widest">
+            <div className="inline-flex items-center space-x-2 bg-white border border-emerald-900 px-3.5 py-1.5 rounded-full">
+              <span className="w-2 h-2 rounded-full bg-emerald-900 animate-pulse" />
+              <span className="text-xs font-bold text-emerald-900 uppercase tracking-widest">
                 Elite Medical Board
               </span>
             </div>
@@ -92,10 +92,10 @@ export default function DoctorsPreview() {
           {eliteExperts.map((expert, index) => (
             <div 
               key={index}
-              className="group relative bg-slate-800/65 backdrop-blur-xl rounded-3xl overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-500 shadow-2xl"
+              className="group relative bg-pink-50 backdrop-blur-xl rounded-3xl overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-500 shadow-2xl"
             >
               {/* Image Canvas */}
-              <div className="w-full aspect-[4/5] relative overflow-hidden bg-slate-800">
+              <div className="w-full aspect-[4/5] relative overflow-hidden bg-pink-50">
                 <Image
                   src={expert.image}
                   alt={expert.name}
@@ -107,10 +107,10 @@ export default function DoctorsPreview() {
                 
                 {/* Clean, Non-Overlapping Top Badging Row */}
                 <div className="absolute top-4 inset-x-4 flex items-center justify-between gap-2 z-20 pointer-events-none">
-                  <span className="bg-emerald-600/95 text-white font-semibold text-[11px] px-3 py-1.5 rounded-xl backdrop-blur-md shadow-md border border-emerald-500/30 truncate">
+                  <span className="text-emerald-400 bg-white font-semibold text-[11px] px-3 py-1.5 rounded-xl backdrop-blur-md shadow-md border border-emerald-500/30 truncate">
                     {expert.focusArea}
                   </span>
-                  <span className="bg-slate-900/90 text-emerald-400 font-bold text-[11px] px-3 py-1.5 rounded-xl backdrop-blur-md shadow-md border border-slate-700 whitespace-nowrap">
+                  <span className="bg-slate-900/90 text-white font-bold text-[11px] px-3 py-1.5 rounded-xl backdrop-blur-md shadow-md border border-slate-700 whitespace-nowrap">
                     {expert.casesResolved}
                   </span>
                 </div>
@@ -118,15 +118,15 @@ export default function DoctorsPreview() {
 
               {/* Content Body */}
               <div className="p-8 space-y-6 -mt-16 relative z-20 flex-grow flex flex-col justify-between">
-                <div className="space-y-3 bg-slate-900/95 backdrop-blur-xl p-6 rounded-2xl border border-slate-800 shadow-xl">
+                <div className="space-y-3 bg-pink-50 backdrop-blur-xl p-6 rounded-2xl border border-gray-50 shadow-xl">
                   <div>
-                    <span className="text-xs font-bold text-amber-400 uppercase tracking-wider block mb-1">
+                    <span className="text-xs font-bold text-amber-300 uppercase tracking-wider block mb-1">
                       {expert.designation}
                     </span>
-                    <h3 className="text-2xl font-extrabold text-white group-hover:text-emerald-400 transition-colors">
+                    <h3 className="text-2xl font-extrabold text-gray-600">
                       {expert.name}
                     </h3>
-                    <p className="text-emerald-300/90 text-xs font-semibold mt-1">
+                    <p className="text-gray-600 text-xs font-semibold mt-1">
                       {expert.degree}
                     </p>
                     <div className="inline-block mt-2 bg-slate-800/80 border border-slate-700/60 px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-300">
@@ -134,7 +134,7 @@ export default function DoctorsPreview() {
                     </div>
                   </div>
                   
-                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-light pt-1 border-t border-slate-800">
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-light pt-1">
                     &ldquo;{expert.tagline}&rdquo;
                   </p>
                 </div>
@@ -143,12 +143,9 @@ export default function DoctorsPreview() {
                 <div className="pt-2">
                   <Link
                     href="/book-appointment"
-                    className="w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-sm py-4 px-6 rounded-xl transition-all duration-300 shadow-lg shadow-emerald-500/25 active:scale-95 group/btn"
+                    className="w-full inline-flex items-center justify-center space-x-2 bg-pink-900 hover:bg-pink-950 text-white font-medium text-sm py-4 px-6 rounded-xl transition-all duration-300 shadow-lg shadow-emerald-500/25 active:scale-95 group/btn"
                   >
                     <span>Request Private Consultation</span>
-                    <svg className="w-4 h-4 transform group-hover/btn:translate-x-1.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7-7" />
-                    </svg>
                   </Link>
                 </div>
               </div>

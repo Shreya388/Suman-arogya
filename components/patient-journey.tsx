@@ -36,12 +36,12 @@ const steps: Step[] = [
 
 export default function PatientJourney() {
   return (
-    <section className="py-20 bg-slate-50/50 relative overflow-hidden">
+    <section className="py-20 bg-pink-50 relative overflow-hidden">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-emerald-700 font-semibold text-sm tracking-wider uppercase bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+          <span className="text-emerald-700 font-medium text-sm tracking-wider uppercase bg-white px-3 py-1 rounded-full border border-emerald-100">
             Seamless Care Experience
           </span>
           <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
@@ -78,9 +78,6 @@ export default function PatientJourney() {
                       />
                     </svg>
                   </div>
-                  <span className="text-3xl font-extrabold text-slate-200 group-hover:text-emerald-100 transition-colors duration-300">
-                    {step.number}
-                  </span>
                 </div>
 
                 {/* Content */}
@@ -102,7 +99,7 @@ export default function PatientJourney() {
         <div className="mt-12 text-center">
           <a
             href="#book"
-            className="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-medium rounded-xl text-white bg-emerald-700 hover:bg-emerald-800 shadow-sm transition-all duration-200"
+            className="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-medium rounded-xl text-white bg-pink-900 hover:bg-pink-800 hover:bg-emerald-800 shadow-sm transition-all duration-200"
           >
             Start Your Consultation Today
           </a>

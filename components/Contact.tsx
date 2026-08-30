@@ -21,18 +21,18 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-slate-50" id="contact">
+    <section className="py-16 md:py-24 bg-pink-50" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs sm:text-sm font-bold text-teal-600 uppercase tracking-widest block">
+          <span className="text-xs sm:text-sm font-bold text-gray-600 uppercase tracking-widest block">
             Get In Touch
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
             We Are Ready to Assist You
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base">
+          <p className="text-gray-600 text-sm sm:text-base">
             Have a question about our treatments or want to reach our support desk? Drop us a line or visit our facility.
           </p>
         </div>
@@ -44,35 +44,35 @@ export default function Contact() {
           <div className="lg:col-span-5 space-y-6">
             
             {/* Phone Card */}
-            <div className="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm flex items-start space-x-4">
+            <div className="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm flex items-start space-x-4">
               <div className="p-3 bg-teal-50 text-teal-600 rounded-xl">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </div>
               <div>
-                <h4 className="text-base font-bold text-slate-900">Call Us Directly</h4>
+                <h4 className="text-base font-bold text-gray-900">Call Us Directly</h4>
                 <p className="text-slate-600 text-sm mt-1">General Desk: +91 98765 43210</p>
                 <p className="text-slate-600 text-sm">Emergency Line: +91 98765 43211</p>
               </div>
             </div>
 
             {/* Email Card */}
-            <div className="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm flex items-start space-x-4">
+            <div className="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm flex items-start space-x-4">
               <div className="p-3 bg-teal-50 text-teal-600 rounded-xl">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
               <div>
-                <h4 className="text-base font-bold text-slate-900">Email Correspondence</h4>
+                <h4 className="text-base font-bold text-gray-900">Email Correspondence</h4>
                 <p className="text-slate-600 text-sm mt-1">support@sumanarogya.com</p>
                 <p className="text-slate-600 text-sm">consult@sumanarogya.com</p>
               </div>
             </div>
 
             {/* Address Card */}
-            <div className="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm flex items-start space-x-4">
+            <div className="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm flex items-start space-x-4">
               <div className="p-3 bg-teal-50 text-teal-600 rounded-xl">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -80,7 +80,7 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h4 className="text-base font-bold text-slate-900">Clinic Location</h4>
+                <h4 className="text-base font-bold text-gray-900">Clinic Location</h4>
                 <p className="text-slate-600 text-sm mt-1 leading-relaxed">
                   123 Medical Wellness Lane, Sector 4,<br />
                   Near Central Health Park, New Delhi, 110001
@@ -103,7 +103,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
                     Full Name
                   </label>
                   <input
@@ -111,12 +111,12 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-teal-500 text-slate-800"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-teal-500 text-slate-800"
                     placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
                     Phone Number
                   </label>
                   <input
@@ -124,14 +124,14 @@ export default function Contact() {
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-teal-500 text-slate-800"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-teal-500 text-slate-800"
                     placeholder="+91 98765 43210"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
                   Email Address
                 </label>
                 <input
@@ -139,13 +139,13 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-teal-500 text-slate-800"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-teal-500 text-slate-800"
                   placeholder="john@example.com"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
                   Your Message
                 </label>
                 <textarea
@@ -160,7 +160,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3.5 px-6 rounded-xl transition-colors shadow-md shadow-teal-100"
+                className="w-full bg-pink-900 hover:bg-pink-800 text-white font-bold py-3.5 px-6 rounded-xl transition-colors shadow-md shadow-teal-100"
               >
                 Send Message
               </button>

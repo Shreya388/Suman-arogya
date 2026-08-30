@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image"; // Fixed: Image is a default import from next/image
-import treatment from "../public/treatment.png";
+import treatment from "../public/treatment.webp";
 
 interface CoreValue {
   title: string;
@@ -48,7 +48,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center mb-24">
           
           {/* Left Column: Premium Interactive Graphic Stack */}
-          <div className="lg:col-span-5 order-last lg:order-first relative">
+          <div className="lg:col-span-6 order-last lg:order-first relative">
             <div className="relative mx-auto max-w-[400px] lg:max-w-none aspect-[4/5] sm:w-[90%]">
               {/* Geometric Decorative Underlays */}
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-emerald-50 rounded-3xl -z-10 opacity-70"></div>
@@ -70,8 +70,8 @@ export default function About() {
                 <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-white/40 shadow-xl">
                   <span className="text-[10px] font-bold text-emerald-800 uppercase tracking-widest block mb-1">Our Mission</span>
                   <p className="text-slate-800 text-xs font-semibold leading-relaxed">
-                    To deliver evidence-based, clinically validated Ayurvedic therapeutic solutions that target the root causes of metabolic and tissue disorders.
-                  </p>
+  To deliver evidence-based physiotherapy solutions that address the underlying causes of pain, mobility limitations, and physical dysfunction while supporting safe and sustainable recovery.
+</p>
                 </div>
               </div>
 
@@ -84,7 +84,7 @@ export default function About() {
           </div>
 
           {/* Right Column: Editorial Copy Layout */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-6 space-y-8">
             <div className="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-100/60 px-3 py-1 rounded-full">
               <span className="w-1.5 h-1.5 bg-emerald-600 rounded-full"></span>
               <span className="text-xs font-bold text-emerald-700 uppercase tracking-widest">
@@ -92,22 +92,22 @@ export default function About() {
               </span>
             </div>
             
-            <h2 className="text-2xl sm:text-2xl lg:text-2xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+            <h2 className="text-3xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
               Ancient Medical Science Refined for Your Modern Wellness Journey
             </h2>
             
-            <p className="text-slate-600 leading-relaxed text-sm sm:text-base font-normal">
-              Founded on the principle of bridging authentic Vedic therapeutic systems with contemporary diagnostic accountability, Suman Arogya offers an advanced environment for disease reversal. We emphasize personalized internal healing patterns, ensuring your medical path addresses system imbalance rather than simple symptom suppression.
-            </p>
-            
-            <p className="text-slate-600 leading-relaxed text-sm sm:text-base font-normal">
-              Whether you are scheduling comprehensive Nadi Pariksha pulse profiling, dealing with chronic digestive disruptions, or mapping targeted panchakarma cellular detoxification protocols, our facility brings clinical infrastructure and credentialed Vaidyas directly to your health planning.
-            </p>
+           <p className="text-slate-600 leading-relaxed text-lg sm:text-lg font-normal">
+  At Suman Arogya, our physiotherapy care is focused on helping you reduce pain, restore movement, and return to your daily activities with greater strength and confidence. We provide personalized treatment based on your condition, physical limitations, lifestyle, and recovery goals, with a focus on addressing the underlying cause of discomfort rather than providing temporary relief.
+</p>
+
+<p className="text-slate-600 leading-relaxed text-lg sm:text-lg font-normal">
+  From back and neck pain, joint stiffness, sports injuries, and muscle problems to post-surgical rehabilitation and mobility concerns, our physiotherapy approach combines targeted exercises, manual therapy, mobility training, and professional guidance. Each treatment plan is designed to support safe recovery, improve physical function, and promote long-term strength and overall wellbeing.
+</p>
             
             <div className="pt-4">
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center bg-white hover:bg-slate-900 text-slate-800 hover:text-white border border-slate-200 hover:border-slate-900 font-bold text-sm px-5 py-3 rounded-xl shadow-sm transition-all duration-300 group"
+                className="inline-flex items-center justify-center bg-white text-emerald-600 border border-emerald-600 hover:border-emerald-500 font-bold text-sm px-5 py-3 rounded-xl transition-all duration-300 group"
               >
                 <span>Meet Our Certified Vaidyas & Staff</span>
                 <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform text-emerald-600 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -120,40 +120,672 @@ export default function About() {
         </div>
 
         {/* Bottom Layout Grid: Core Value Cards */}
-        <div className="border-t border-slate-200/60 pt-20">
-          <div className="max-w-2xl mx-auto text-center mb-16 space-y-2">
-            <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight sm:text-3xl">
-              Why Hundreds of Families Trust Suman Arogya
-            </h3>
-            <p className="text-slate-500 text-sm">
-              We approach chronic disease resolution differently by prioritizing root internal system balances.
-            </p>
+        <div className="border-t border-pink-100/70 pt-20">
+
+  {/* =========================
+      SECTION HEADER
+  ========================== */}
+  <div className="max-w-4xl mx-auto text-center mb-14">
+
+    <div className="inline-flex items-center gap-2 rounded-full bg-pink-50 border border-pink-100 px-4 py-2 mb-5">
+      <span className="flex h-2 w-2 rounded-full bg-emerald-700"></span>
+
+      <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-pink-900">
+        Integrated Healthcare
+      </span>
+    </div>
+
+    <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-800 tracking-tight leading-tight">
+      One Clinic.{" "}
+      <span className="text-pink-900">Complete Care.</span>
+    </h3>
+
+    <p className="mt-5 max-w-2xl mx-auto text-gray-600 text-sm sm:text-base leading-relaxed">
+      At Suman Arogya, Ayurvedic wisdom, modern medical guidance, and
+      physiotherapy come together to create personalized healthcare plans
+      based on your condition, lifestyle, and individual needs.
+    </p>
+
+  </div>
+
+
+  {/* =========================
+      MAIN SERVICE CARDS
+  ========================== */}
+  <div className="grid grid-cols-1 lg:grid-cols-3 gap-7">
+
+
+    {/* ================= CARD 1 ================= */}
+    <div
+      className="
+        group relative overflow-hidden
+        rounded-3xl
+        bg-white
+        border border-pink-100
+        p-7 sm:p-8
+        shadow-[0_10px_40px_rgba(131,24,67,0.06)]
+        hover:-translate-y-2
+        hover:shadow-[0_20px_50px_rgba(131,24,67,0.12)]
+        transition-all duration-500
+      "
+    >
+
+      {/* Top accent */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-pink-900"></div>
+
+      {/* Decorative circle */}
+      <div
+        className="
+          absolute -right-14 -top-14
+          w-32 h-32
+          rounded-full
+          bg-pink-50
+          opacity-80
+          group-hover:scale-150
+          transition-transform duration-700
+        "
+      ></div>
+
+
+      <div className="relative">
+
+        {/* Icon + Category */}
+        <div className="flex items-center justify-between mb-7">
+
+          <div
+            className="
+              w-14 h-14
+              rounded-2xl
+              bg-pink-50
+              border border-pink-100
+              flex items-center justify-center
+              text-pink-900
+              group-hover:bg-pink-900
+              group-hover:text-white
+              transition-all duration-300
+            "
+          >
+            <svg
+              className="w-7 h-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.7}
+                d="M12 3C8.5 6.5 5 10.2 5 14a7 7 0 0014 0c0-3.8-3.5-7.5-7-11z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.7}
+                d="M9 15c1.2 1 2.8 1 4 0"
+              />
+            </svg>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {coreValues.map((value, idx) => (
-              <div 
-                key={idx} 
-                className="group p-8 rounded-2xl border border-slate-200/60 bg-white hover:border-transparent shadow-sm hover:shadow-2xl hover:shadow-slate-200/80 transition-all duration-300 relative flex flex-col justify-between"
-              >
-                {/* Micro Gradient Top Line Highlight on Hover */}
-                <div className="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                <div>
-                  <div className="p-2.5 bg-emerald-50 border border-emerald-100/50 w-fit rounded-xl mb-6 text-emerald-700 group-hover:bg-white group-hover:text-white transition-colors duration-300">
-                    {value.icon}
-                  </div>
-                  <h4 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-emerald-700">
-                    {value.title}
-                  </h4>
-                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-normal">
-                    {value.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <span className="text-[10px] font-bold uppercase tracking-widest text-pink-900 bg-pink-50 px-3 py-1.5 rounded-full">
+            Ayurveda
+          </span>
+
         </div>
+
+
+        <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-pink-900 transition-colors">
+          Ayurvedic Healthcare
+        </h4>
+
+        <p className="text-sm text-gray-600 leading-relaxed mb-6">
+          Personalized Ayurvedic care focused on understanding your health
+          condition, lifestyle, dietary habits, and individual requirements.
+          Treatment plans may include Ayurvedic medicines, diet and lifestyle
+          guidance, and traditional therapies when appropriate.
+        </p>
+
+
+        {/* Feature list */}
+        <div className="space-y-3">
+
+          {[
+            "Personalized Ayurvedic medicines",
+            "Diet & lifestyle guidance",
+            "Traditional Ayurvedic therapies",
+            "Long-term wellness support",
+          ].map((item) => (
+            <div key={item} className="flex items-center gap-3">
+
+              <div className="w-5 h-5 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0">
+                <svg
+                  className="w-3 h-3 text-emerald-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={3}
+                    d="M5 12l4 4L19 6"
+                  />
+                </svg>
+              </div>
+
+              <span className="text-xs sm:text-sm text-gray-600">
+                {item}
+              </span>
+
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+    </div>
+
+
+    {/* ================= CARD 2 ================= */}
+    <div
+      className="
+        group relative overflow-hidden
+        rounded-3xl
+        bg-white
+        border border-emerald-100
+        p-7 sm:p-8
+        shadow-[0_10px_40px_rgba(4,120,87,0.06)]
+        hover:-translate-y-2
+        hover:shadow-[0_20px_50px_rgba(4,120,87,0.12)]
+        transition-all duration-500
+      "
+    >
+
+      {/* Top accent */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-emerald-700"></div>
+
+      {/* Decorative circle */}
+      <div
+        className="
+          absolute -right-14 -top-14
+          w-32 h-32
+          rounded-full
+          bg-emerald-50
+          opacity-80
+          group-hover:scale-150
+          transition-transform duration-700
+        "
+      ></div>
+
+
+      <div className="relative">
+
+        {/* Icon + Category */}
+        <div className="flex items-center justify-between mb-7">
+
+          <div
+            className="
+              w-14 h-14
+              rounded-2xl
+              bg-emerald-50
+              border border-emerald-100
+              flex items-center justify-center
+              text-emerald-700
+              group-hover:bg-emerald-700
+              group-hover:text-white
+              transition-all duration-300
+            "
+          >
+            <svg
+              className="w-7 h-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.7}
+                d="M9 12l2 2 4-4m5.6-4A11.9 11.9 0 0112 3a11.9 11.9 0 01-8.6 3A12 12 0 003 9c0 5.6 3.8 10.3 9 11.6 5.2-1.3 9-6 9-11.6 0-1-.1-2-.4-3z"
+              />
+            </svg>
+          </div>
+
+          <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full">
+            Modern Care
+          </span>
+
+        </div>
+
+
+        <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-emerald-700 transition-colors">
+          Modern Medicine & Consultation
+        </h4>
+
+        <p className="text-sm text-gray-600 leading-relaxed mb-6">
+          Modern medical consultation and treatment support are provided
+          according to individual healthcare needs, helping patients receive
+          appropriate medical evaluation, guidance, and ongoing care.
+        </p>
+
+
+        {/* Feature list */}
+        <div className="space-y-3">
+
+          {[
+            "Modern medical consultation",
+            "Condition-based treatment planning",
+            "Medication guidance",
+            "Ongoing health monitoring",
+          ].map((item) => (
+            <div key={item} className="flex items-center gap-3">
+
+              <div className="w-5 h-5 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0">
+                <svg
+                  className="w-3 h-3 text-emerald-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={3}
+                    d="M5 12l4 4L19 6"
+                  />
+                </svg>
+              </div>
+
+              <span className="text-xs sm:text-sm text-gray-600">
+                {item}
+              </span>
+
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+    </div>
+
+
+    {/* ================= CARD 3 ================= */}
+    <div
+      className="
+        group relative overflow-hidden
+        rounded-3xl
+        bg-white
+        border border-amber-100
+        p-7 sm:p-8
+        shadow-[0_10px_40px_rgba(245,158,11,0.05)]
+        hover:-translate-y-2
+        hover:shadow-[0_20px_50px_rgba(245,158,11,0.10)]
+        transition-all duration-500
+      "
+    >
+
+      {/* Top accent */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-amber-500"></div>
+
+      {/* Decorative circle */}
+      <div
+        className="
+          absolute -right-14 -top-14
+          w-32 h-32
+          rounded-full
+          bg-amber-50
+          opacity-80
+          group-hover:scale-150
+          transition-transform duration-700
+        "
+      ></div>
+
+
+      <div className="relative">
+
+        {/* Icon + Category */}
+        <div className="flex items-center justify-between mb-7">
+
+          <div
+            className="
+              w-14 h-14
+              rounded-2xl
+              bg-amber-50
+              border border-amber-100
+              flex items-center justify-center
+              text-amber-500
+              group-hover:bg-amber-500
+              group-hover:text-white
+              transition-all duration-300
+            "
+          >
+            <svg
+              className="w-7 h-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <circle
+                cx="12"
+                cy="5"
+                r="2.5"
+                strokeWidth={1.7}
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.7}
+                d="M8 22l2-8m6 8l-2-8m-5-4h6m-3 0v4"
+              />
+            </svg>
+          </div>
+
+          <span className="text-[10px] font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1.5 rounded-full">
+            Physiotherapy
+          </span>
+
+        </div>
+
+
+        <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-amber-600 transition-colors">
+          Physiotherapy & Rehabilitation
+        </h4>
+
+        <p className="text-sm text-gray-600 leading-relaxed mb-6">
+          Individualized physiotherapy support for improving movement,
+          strength, mobility, posture, and physical function through
+          appropriate therapeutic exercises and rehabilitation techniques.
+        </p>
+
+
+        {/* Feature list */}
+        <div className="space-y-3">
+
+          {[
+            "Therapeutic exercises",
+            "Pain & mobility management",
+            "Posture & movement correction",
+            "Recovery & rehabilitation support",
+          ].map((item) => (
+            <div key={item} className="flex items-center gap-3">
+
+              <div className="w-5 h-5 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0">
+                <svg
+                  className="w-3 h-3 text-amber-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={3}
+                    d="M5 12l4 4L19 6"
+                  />
+                </svg>
+              </div>
+
+              <span className="text-xs sm:text-sm text-gray-600">
+                {item}
+              </span>
+
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  {/* =========================
+      CONDITIONS SECTION
+  ========================== */}
+  <div className="mt-14">
+
+    <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-7">
+
+      <div>
+        <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-emerald-700">
+          Our Areas of Care
+        </span>
+
+        <h4 className="mt-2 text-2xl font-bold text-gray-800">
+          Health Conditions We Support
+        </h4>
+      </div>
+
+      <p className="max-w-md text-xs sm:text-sm text-gray-600 leading-relaxed">
+        Personalized care is planned according to your individual condition,
+        medical history, and healthcare requirements.
+      </p>
+
+    </div>
+
+
+    {/* Condition Pills */}
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+
+      {[
+        {
+          name: "Piles",
+          category: "Digestive Health",
+        },
+        {
+          name: "Diabetes",
+          category: "Metabolic Health",
+        },
+        {
+          name: "PCOS",
+          category: "Women's Health",
+        },
+        {
+          name: "Skin Diseases",
+          category: "Skin & Wellness",
+        },
+        {
+          name: "Thyroid",
+          category: "Hormonal Health",
+        },
+        {
+          name: "Arthritis",
+          category: "Joint & Mobility",
+        },
+        {
+          name: "Digestive Problems",
+          category: "Digestive Health",
+        },
+        {
+          name: "Joint & Back Pain",
+          category: "Physiotherapy",
+        },
+      ].map((condition) => (
+
+        <div
+          key={condition.name}
+          className="
+            group
+            bg-white
+            border border-slate-200/80
+            rounded-2xl
+            px-4 py-4
+            hover:border-pink-200
+            hover:bg-pink-50/40
+            transition-all duration-300
+            cursor-default
+          "
+        >
+
+          <div className="flex items-center gap-3">
+
+            <div
+              className="
+                w-8 h-8
+                rounded-lg
+                bg-emerald-50
+                text-emerald-700
+                flex items-center justify-center
+                shrink-0
+                group-hover:bg-pink-100
+                group-hover:text-pink-900
+                transition-colors duration-300
+              "
+            >
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 12h14M12 5v14"
+                />
+              </svg>
+            </div>
+
+
+            <div className="min-w-0">
+
+              <p className="text-sm font-bold text-gray-800 truncate group-hover:text-pink-900 transition-colors">
+                {condition.name}
+              </p>
+
+              <p className="text-[10px] text-gray-500 mt-0.5">
+                {condition.category}
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+
+  {/* =========================
+      BOTTOM INTEGRATED CARE BANNER
+  ========================== */}
+  <div
+    className="
+      mt-10
+      relative overflow-hidden
+      rounded-3xl
+      bg-pink-50
+      border border-pink-100
+      px-6 py-7 sm:px-8
+    "
+  >
+
+    {/* Decorative elements */}
+    <div className="absolute -right-10 -bottom-16 w-40 h-40 rounded-full bg-white/70"></div>
+    <div className="absolute right-24 -top-10 w-24 h-24 rounded-full bg-emerald-50/80"></div>
+
+
+    <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+
+      <div className="flex items-start gap-4">
+
+        <div
+          className="
+            w-12 h-12
+            rounded-2xl
+            bg-white
+            border border-pink-100
+            text-pink-900
+            flex items-center justify-center
+            shrink-0
+            shadow-sm
+          "
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.8}
+              d="M12 21s-7-4.35-7-10a4 4 0 017-2.65A4 4 0 0119 11c0 5.65-7 10-7 10z"
+            />
+          </svg>
+        </div>
+
+
+        <div>
+
+          <div className="flex flex-wrap items-center gap-2">
+
+            <h4 className="text-lg font-bold text-gray-800">
+              Healthcare Designed Around You
+            </h4>
+
+            <span className="text-[9px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-1 rounded-full">
+              Personalized
+            </span>
+
+          </div>
+
+          <p className="mt-2 max-w-2xl text-sm text-gray-600 leading-relaxed">
+            Whether you need Ayurvedic care, modern medical consultation,
+            physiotherapy, or support for a chronic health concern, our
+            approach is centered around your individual healthcare needs.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <Link
+        href="/contact"
+        className="
+          relative shrink-0
+          inline-flex items-center justify-center
+          gap-2
+          rounded-xl
+          bg-pink-900
+          hover:bg-pink-800
+          text-white
+          px-6 py-3
+          text-sm font-bold
+          shadow-lg shadow-pink-900/10
+          transition-all duration-300
+          hover:-translate-y-0.5
+        "
+      >
+        Book a Consultation
+
+        <svg
+          className="w-4 h-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2.5}
+            d="M5 12h14m-5-5l5 5-5 5"
+          />
+        </svg>
+      </Link>
+
+    </div>
+
+  </div>
+
+</div>
 
       </div>
     </section>
