@@ -3,47 +3,42 @@ import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import suman from "../public/suman.png";
 import oshi from "../public/oshi.png";
+import gaurav from "../public/gaurav.png";
+import doctor from "../public/doctor.png";
 
 interface ExpertProfile {
   name: string;
-  designation: string;
   degree: string;
   experience: string;
-  focusArea: string;
   tagline: string;
-  casesResolved: string;
   image: string | StaticImageData; // Allow both static imports and string URLs
 }
 
 const eliteExperts: ExpertProfile[] = [
   {
-    name: "Dr. Suman Sharma",
-    designation: "Chief Medical Officer & Master Vaidya",
-    degree: "MD (Internal Medicine), BAMS, Ph.D. (Ayurveda)",
-    experience: "16+ Years Experience",
-    focusArea: "Metabolic & Autoimmune Restoration",
-    tagline: "Specializing in deep-rooted chronic reversal protocols through integrated Nadi diagnostics.",
-    casesResolved: "3,500+ Chronic Cases",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&h=1000&q=80", // ✅ Fixed: Passed variable directly without curly braces
+    name: "Dr. Mayank Prajapati",
+    degree: "BPT (Bachelor of Physiotherapy)",
+    experience: "1 Year Experience",
+    tagline:
+      "Focused on personalized physiotherapy for pain relief, improved mobility, and better day-to-day movement.",
+    image: doctor,
   },
+
   {
-    name: "Dr. Rohan Verma",
-    designation: "Director of Clinical Dermatology",
-    degree: "MD (Dermatology), DVD, Fellowship in Laser Aesthetics",
-    experience: "12+ Years Experience",
-    focusArea: "Advanced Trichology & Skin Regeneration",
-    tagline: "Bridging modern dermatological laser interventions with constitutional blood purification therapies.",
-    casesResolved: "4,200+ Treatments",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&h=1000&q=80",
+    name: "Dr. Gaurav Kumar",
+    degree: "BPT (Bachelor of Physiotherapy)",
+    experience: "2 Years Experience",
+    tagline:
+      "Helping patients recover from musculoskeletal pain and injuries through targeted exercises and rehabilitation.",
+    image: gaurav,
   },
+
   {
     name: "Dr. Oshi Chauhan",
-    designation: "Head of Minimally Invasive Proctology",
-    degree: "BPT (Bachelors in Physiotherapy)",
-    experience: "11+ Years Experience",
-    focusArea: "Gastrointestinal & Advanced Laser Surgery",
-    tagline: "Pioneering pain-free, non-surgical and laser-assisted resolutions for complex digestive disorders.",
-    casesResolved: "2,900+ Procedures",
+    degree: "BPT (Bachelor of Physiotherapy)",
+    experience: "2 Years Experience",
+    tagline:
+      "Providing exercise-based rehabilitation to improve strength, flexibility, mobility, and functional recovery.",
     image: oshi,
   },
 ];
@@ -55,7 +50,7 @@ export default function DoctorsPreview() {
       <div className="" />
       <div className="" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -105,24 +100,13 @@ export default function DoctorsPreview() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-90" />
                 
-                {/* Clean, Non-Overlapping Top Badging Row */}
-                <div className="absolute top-4 inset-x-4 flex items-center justify-between gap-2 z-20 pointer-events-none">
-                  <span className="text-emerald-400 bg-white font-semibold text-[11px] px-3 py-1.5 rounded-xl backdrop-blur-md shadow-md border border-emerald-500/30 truncate">
-                    {expert.focusArea}
-                  </span>
-                  <span className="bg-slate-900/90 text-white font-bold text-[11px] px-3 py-1.5 rounded-xl backdrop-blur-md shadow-md border border-slate-700 whitespace-nowrap">
-                    {expert.casesResolved}
-                  </span>
-                </div>
+                
               </div>
 
               {/* Content Body */}
               <div className="p-8 space-y-6 -mt-16 relative z-20 flex-grow flex flex-col justify-between">
                 <div className="space-y-3 bg-pink-50 backdrop-blur-xl p-6 rounded-2xl border border-gray-50 shadow-xl">
                   <div>
-                    <span className="text-xs font-bold text-amber-300 uppercase tracking-wider block mb-1">
-                      {expert.designation}
-                    </span>
                     <h3 className="text-2xl font-extrabold text-gray-600">
                       {expert.name}
                     </h3>
@@ -135,7 +119,7 @@ export default function DoctorsPreview() {
                   </div>
                   
                   <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-light pt-1">
-                    &ldquo;{expert.tagline}&rdquo;
+                    {expert.tagline}
                   </p>
                 </div>
 
@@ -145,7 +129,7 @@ export default function DoctorsPreview() {
                     href="/book-appointment"
                     className="w-full inline-flex items-center justify-center space-x-2 bg-pink-900 hover:bg-pink-950 text-white font-medium text-sm py-4 px-6 rounded-xl transition-all duration-300 shadow-lg shadow-emerald-500/25 active:scale-95 group/btn"
                   >
-                    <span>Request Private Consultation</span>
+                    <span>Book Private Consultation</span>
                   </Link>
                 </div>
               </div>

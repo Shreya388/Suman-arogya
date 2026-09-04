@@ -3,54 +3,44 @@ import React from "react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 
-import suman from "../../public/suman.png";
 import oshi from "../../public/oshi.png";
+import gaurav from "../../public/gaurav.png";
+import doctor from "../../public/doctor.png";
+
 
 interface Doctor {
   name: string;
-  designation: string;
   degree: string;
   experience: string;
-  focusArea: string;
   tagline: string;
-  casesResolved: string;
   image: string | StaticImageData;
 }
 
 export default function DoctorsPage() {
   const doctors: Doctor[] = [
     {
-      name: "Dr. Suman Sharma",
-      designation: "Chief Medical Officer & Master Vaidya",
-      degree: "MD (Internal Medicine), BAMS, Ph.D. (Ayurveda)",
-      experience: "16+ Years Experience",
-      focusArea: "Metabolic & Autoimmune Care",
+      name: "Dr. Mayank Prajapati",
+      degree: "BPT (Bachelors in Physiotherapy)",
+      experience: "1 years experience",
       tagline:
-        "Focused on personalized chronic-care approaches that bring Ayurvedic principles together with appropriate modern medical understanding.",
-      casesResolved: "3,500+ Chronic Cases",
-      image: suman,
+        "Focused on personalized physiotherapy for pain relief, improved mobility, and better day-to-day movement.",
+      image: doctor,
     },
     {
-      name: "Dr. Rohan Verma",
-      designation: "Director of Clinical Dermatology",
-      degree: "MD (Dermatology), DVD, Fellowship in Laser Aesthetics",
-      experience: "12+ Years Experience",
-      focusArea: "Skin & Hair Care",
+      name: "Dr. Gaurav Kumar",
+      degree: "BPT (Bachelors in Physiotherapy)",
+      experience: "2 Years Experience",
       tagline:
-        "Combining modern dermatological evaluation with individualized approaches to skin and hair health.",
-      casesResolved: "4,200+ Treatments",
+        "Providing exercise-based rehabilitation to improve strength, flexibility, mobility, and functional recovery.",
       image:
-        "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&h=1000&q=80",
+        gaurav,
     },
     {
       name: "Dr. Oshi Chauhan",
-      designation: "Head of Minimally Invasive Proctology",
-      degree: "MS (General Surgery), MBBS, FMAS (Minimal Access)",
-      experience: "11+ Years Experience",
-      focusArea: "Digestive & Proctology Care",
+      degree: "BPT (Bachelors in Physiotherapy)",
+      experience: "2",
       tagline:
-        "Focused on modern surgical and minimally invasive approaches for complex digestive and proctology conditions.",
-      casesResolved: "2,900+ Procedures",
+        "Helping patients recover from musculoskeletal pain and injuries through targeted exercises and rehabilitation.",
       image: oshi,
     },
   ];
@@ -102,7 +92,6 @@ export default function DoctorsPage() {
                 Ayurvedic wisdom and appropriate modern medical care to
                 understand your health concerns and guide you toward
                 personalized treatment.
-
               </p>
 
               {/* CTA */}
@@ -279,33 +268,11 @@ export default function DoctorsPage() {
                     {/* Bottom gradient */}
                     <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#1F2937]/70 via-[#1F2937]/10 to-transparent" />
 
-                    {/* Focus badge */}
-                    <div className="absolute top-4 left-4">
-
-                      <span className="inline-flex items-center rounded-full bg-[#047857] px-3 py-1.5 text-[10px] font-bold uppercase tracking-wide text-white shadow-lg">
-                        {doc.focusArea}
-                      </span>
-
-                    </div>
-
-                    {/* Cases */}
-                    <div className="absolute bottom-4 left-4 right-4">
-
-                      <span className="inline-flex rounded-lg bg-white/95 backdrop-blur px-3 py-1.5 text-[11px] font-bold text-[#831843] shadow-sm">
-                        {doc.casesResolved}
-                      </span>
-
-                    </div>
-
                   </div>
 
 
                   {/* Card content */}
                   <div className="p-7">
-
-                    <span className="text-[10px] font-black uppercase tracking-[0.15em] text-[#047857]">
-                      {doc.designation}
-                    </span>
 
                     <h3 className="mt-2 text-2xl font-black text-[#1F2937] group-hover:text-[#831843] transition-colors">
                       {doc.name}
@@ -328,11 +295,6 @@ export default function DoctorsPage() {
                       </span>
 
                     </div>
-
-
-                    {/* Divider */}
-                    <div className="my-5 h-px bg-[#831843]/10" />
-
 
                     {/* Description */}
                     <p className="text-sm leading-6 text-[#4B5563]">

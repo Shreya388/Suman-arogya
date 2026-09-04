@@ -22,7 +22,7 @@ export default function Contact() {
 
   return (
     <section className="py-16 md:py-24 bg-pink-50" id="contact">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -52,8 +52,8 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="text-base font-bold text-gray-900">Call Us Directly</h4>
-                <p className="text-slate-600 text-sm mt-1">General Desk: +91 98765 43210</p>
-                <p className="text-slate-600 text-sm">Emergency Line: +91 98765 43211</p>
+                <p className="text-slate-600 text-sm mt-1">General Desk: +91 8700693622</p>
+                <p className="text-slate-600 text-sm">Emergency Line: +91 8700693622</p>
               </div>
             </div>
 
@@ -66,7 +66,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="text-base font-bold text-gray-900">Email Correspondence</h4>
-                <p className="text-slate-600 text-sm mt-1">support@sumanarogya.com</p>
+                <p className="text-slate-600 text-sm mt-1">sumanarogyaa@gmail.com</p>
                 <p className="text-slate-600 text-sm">consult@sumanarogya.com</p>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-teal-500 text-slate-800"
-                    placeholder="John Doe"
+                    placeholder="Patient name"
                   />
                 </div>
                 <div>
@@ -140,7 +140,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-teal-500 text-slate-800"
-                  placeholder="john@example.com"
+                  placeholder="email"
                 />
               </div>
 
