@@ -77,7 +77,7 @@ export default function About() {
                 />
 
                 {/* Floating Glassmorphic Mission Plate */}
-                <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-white/40 shadow-xl">
+                <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-5 hidden lg:block rounded-2xl border border-white/40 shadow-xl">
                   <span className="text-[10px] font-bold text-emerald-800 uppercase tracking-widest block mb-1">Our Mission</span>
                   <p className="text-slate-800 text-xs font-semibold leading-relaxed">
                     To deliver evidence-based physiotherapy solutions that address the underlying causes of pain, mobility limitations, and physical dysfunction while supporting safe and sustainable recovery.
@@ -548,7 +548,7 @@ export default function About() {
   ========================== */}
           <div className="mt-14">
 
-            <div className="px-30 gap-4 mb-7">
+            <div className="px-4 lg:px-4 gap-4 mb-7">
 
               <div>
                 <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-emerald-700">
