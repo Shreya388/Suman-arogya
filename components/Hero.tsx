@@ -19,7 +19,7 @@ export default function DiseaseCarousel() {
               Left CONTENT
           ====================================================== */}
 
-          <div className="lg:col-span-5 py-12 lg:py-16 z-10">
+          <div className="lg:col-span-6 py-12 lg:py-16 z-10">
 
             {/* Small badge */}
             <div className="inline-flex items-center gap-2 mb-5">
@@ -94,7 +94,7 @@ export default function DiseaseCarousel() {
               Center — DOCTOR IMAGE
           ====================================================== */}
 
-          <div className="lg:col-span-4 relative h-[430px] sm:h-[500px] lg:h-[490px] flex items-end justify-center">
+          <div className="lg:col-span-6 relative h-[430px] sm:h-[500px] lg:h-[490px] flex items-end justify-center">
 
             {/* Doctor image */}
             <img
@@ -119,124 +119,9 @@ export default function DiseaseCarousel() {
               </div>
 
             </div>
-
           </div>
-
-
-          {/* =====================================================
-              RIGHT — CONSULTATION CARD
-          ====================================================== */}
-
-          <div className="lg:col-span-3 pb-10 lg:pb-0 z-20">
-
-            <div className="rounded-[26px] overflow-hidden bg-white border border-[#831843]/10 shadow-2xl shadow-[#831843]/10">
-
-              {/* Card header */}
-              <div className="bg-pink-900 px-6 py-5">
-
-                <p className="text-xs font-bold uppercase tracking-widest text-white/70">
-                  Personalized Healthcare
-                </p>
-
-                <h2 className="mt-1 text-xl font-black text-white">
-                  Book a Consultation
-                </h2>
-
-                <p className="mt-1 text-xs text-white/75">
-                  Discuss your health with our care team.
-                </p>
-              </div>
-              {/* Form */}
-              <form className="p-5 sm:p-6 space-y-4">
-
-                {/* Patient Name */}
-                <div>
-                  <label className="mb-1.5 block text-xs font-bold text-[#1F2937]">
-                    Patient Name
-                  </label>
-
-                  <input
-                    type="text"
-                    placeholder="Enter your name"
-                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-[#1F2937] outline-none transition focus:border-[#831843] focus:ring-2 focus:ring-[#831843]/10"
-                  />
-
-                </div>
-
-
-                {/* Mobile Number */}
-                <div>
-
-                  <label className="mb-1.5 block text-xs font-bold text-[#1F2937]">
-                    Mobile Number
-                  </label>
-
-                  <input
-                    type="tel"
-                    placeholder="+91 XXXXX XXXXX"
-                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-[#1F2937] outline-none transition focus:border-[#047857] focus:ring-2 focus:ring-[#047857]/10"
-                  />
-
-                </div>
-
-
-                {/* Health Concern */}
-                <div>
-
-                  <label className="mb-1.5 block text-xs font-bold text-[#1F2937]">
-                    Health Concern
-                  </label>
-
-                  <select
-                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-[#4B5563] outline-none transition focus:border-[#831843] focus:ring-2 focus:ring-[#831843]/10"
-                  >
-                    <option>Select your concern</option>
-                    <option>Diabetes / Sugar</option>
-                    <option>Thyroid</option>
-                    <option>Digestive Problems</option>
-                    <option>Skin Problems</option>
-                    <option>Piles</option>
-                    <option>PCOS / Women's Health</option>
-                    <option>Joint & Arthritis</option>
-                    <option>Other Health Concern</option>
-                  </select>
-
-                </div>
-
-
-                {/* CTA */}
-                <button
-                  type="submit"
-                  className="w-full rounded-xl bg-[#831843] py-3.5 text-sm font-bold text-white shadow-lg shadow-[#831843]/20 transition-all duration-300 hover:bg-[#9D174D] hover:-translate-y-0.5"
-                >
-                  Book Consultation
-                </button>
-
-
-                {/* reassurance */}
-                <div className="flex items-start gap-2 rounded-xl bg-[#FDF2F8] p-3">
-
-                  <span className="text-[#047857] text-sm">
-                    ✓
-                  </span>
-
-                  <p className="text-[11px] leading-5 text-[#4B5563]">
-                    Your information is used only to help our team understand
-                    your consultation needs.
-                  </p>
-
-                </div>
-
-              </form>
-
-            </div>
-
-          </div>
-
-        </div>
-
       </div>
-
+</div>
 
      {/* =====================================================
     BOTTOM SERVICE STRIP
