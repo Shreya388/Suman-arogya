@@ -146,7 +146,7 @@ export default function ClinicHeader() {
               <Link href="/" className="flex items-center space-x-2">
 
                 <div className="flex flex-col">
-                  <Image src={logo} className="w-20 h-auto" alt="Logo" />
+                  <Image src={logo} className="w-32 h-auto" alt="Logo" />
                 </div>
               </Link>
             </div>

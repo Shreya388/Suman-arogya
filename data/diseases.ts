@@ -25,7 +25,7 @@ export const diseaseDatabase: Record<string, DiseaseDetail> = {
     title: "Diabetes Mellitus (Madhumeha)",
     category: "Metabolic Care",
     overview: "A metabolic disruption characterized by diminished insulin efficiency or production, leading to high systemic blood sugar levels and long-term tissue depletion.",
-    imageUrl: "https://images.unsplash.com/photo-1505575967455-40e256f73376?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1599814516385-5eb0a11888d4?auto=format&fit=crop&w=1200&q=80",
     symptoms: ["Frequent urination & deep exhaustion", "Slow healing of skin micro-wounds", "Unusual sweetness or stickiness in saliva"],
     treatments: ["Pancreatic cell revitalization", "Strict anti-Kapha carbohydrate restrictions", "Ama metabolic waste clearance"],
     ayurvedicPerspective: {
@@ -66,21 +66,7 @@ export const diseaseDatabase: Record<string, DiseaseDetail> = {
     },
     detailedArticle: "Hyperthyroidism is viewed as a wildfire burning out bodily tissues (Dhatus). We focus on building a nourishing, cooling shield to preserve lean mass and down-regulate an overstimulated nervous core."
   },
-  "chronic-fatigue": {
-    title: "Chronic Fatigue Syndrome (Ojas Kshaya)",
-    category: "Metabolic Care",
-    overview: "A complex, debilitating disorder characterized by profound, persistent physical and mental exhaustion that cannot be alleviated by rest.",
-    imageUrl: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=1200&auto=format&fit=crop",
-    symptoms: ["Unrefreshing sleep combined with persistent muscle aches", "Severe post-exertional malaise lasting over 24 hours", "Cognitive impairments, memory loss, and mental processing fog"],
-    treatments: ["Vital life essence replenishment (Ojas Rejuvenation)", "Mitochondrial metabolic fire upregulation", "Nervous system grounding therapies"],
-    ayurvedicPerspective: {
-      doshaImbalance: "Severe Depletion of Ojas (Life Essence) alongside Vata Aggravation",
-      rootCauseText: "Chronic overexertion, mental stress, irregular nutrition, and poor sleep burn up the body's primary vital reserves, destabilizing nervous system pathways.",
-      herbalRemedies: ["Ashwagandha for adrenal recovery", "Chyawanprash or specialized Amla confections to rebuild cellular stamina"],
-      lifestyleAdjustments: ["Rigid restorative sleep schedules (in bed before 10 PM)", "Gentle, non-exhausting breathing techniques (Anuloma Viloma)"]
-    },
-    detailedArticle: "Chronic fatigue points to a completely empty energy tank. Pushing through with stimulants or caffeine only causes further crash cycles. Our clinical process focuses on replenishing tissue vitality (Dhatus) and cooling down hyperactive nervous signals."
-  },
+  
 
   // =========================================================================
   // 2. DIGESTIVE HEALTH & GASTROENTEROLOGY (5-12)
